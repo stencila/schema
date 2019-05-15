@@ -8,12 +8,9 @@ description: |
   a haircut; or an episode of a TV show streamed online. https://schema.org/Product
 properties:
   brand:
-    '@id': schema:brand
     description: |
       Brand that the product is labelled with.
-    type: object
-    allOf:
-      - $ref: Brand.schema.yaml
+    type: sting
   productID:
     '@id': schema:productID
     description: |
