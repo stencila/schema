@@ -1,6 +1,6 @@
 # Product
 
-The `Product` type allows you to provide details about a product such as the product brand, logo and ID. This type can be used as any kind of product that is not [`CreativeWork`](/CreativeWork) item.
+The `Product` type allows you to provide details about a product such as the product brand, logo and ID. This type can be used as any kind of product that is not a [`CreativeWork`](/CreativeWork).
 
 ## Examples
 
@@ -10,7 +10,10 @@ The examples below are based on a model of [direct vision spectroscope](https://
 {
     "type": "Product",
     "brand": "eisco",
-    "logo": "https://beta-static.fishersci.com/content/dam/fishersci/en_US/images/brands/e/eisco/eisco-logo-1071.png",
+    "name": "Direct Vision Spectroscope in Metal Case",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1027/4949/products/PH0595_704x512.jpg?v=1481734604"
+    ],
     "productID" : "PH0595"
 }
 ```
