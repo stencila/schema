@@ -63,9 +63,9 @@ matrix:
         - cd r
 
       script:
-        - make -C r lint
-        - make -C r test
-        - make -C r build
+        - make lint
+        - make test
+        - make build
 
       after_success:
         - cd r && Rscript -e 'covr::codecov()'
