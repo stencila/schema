@@ -55,6 +55,9 @@ matrix:
         - roxygen
         - testthat
 
+      before_install:
+        - cd r
+
       script:
         - make -C r lint
         - make -C r test
