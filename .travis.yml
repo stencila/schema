@@ -49,8 +49,11 @@ matrix:
     - language: r
       r: release
 
-      install:
-        - make -C r setup
+      r_binary_packages:
+        - covr
+        - lintr
+        - roxygen
+        - testthat
 
       script:
         - make -C r lint
