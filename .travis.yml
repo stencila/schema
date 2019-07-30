@@ -49,6 +49,7 @@ matrix:
     - language: r
       r: release
       dist: xenial
+      sudo: true
 
       r_binary_packages:
         - covr
