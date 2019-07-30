@@ -53,7 +53,7 @@ matrix:
       r_binary_packages:
         - covr
         - lintr
-        - roxygen
+        - roxygen2
         - testthat
 
       before_install:
