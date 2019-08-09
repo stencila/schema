@@ -9,9 +9,11 @@ Enum0 = Enum("0", ["normal", "suppressAuthor"])
 
 Enum1 = Enum("1", ["ascending", "descending", "unordered"])
 
-Enum2 = Enum("2", ["data", "header"])
+Enum2 = Enum("2", ["string", "int", "float", "boolean", "json"])
 
-Enum3 = Enum("3", ["header", "footer"])
+Enum3 = Enum("3", ["data", "header"])
+
+Enum4 = Enum("4", ["header", "footer"])
 
 
 class Entity:
@@ -1431,6 +1433,29 @@ class Paragraph(Entity):
             self.content = content
 
 
+class Parameter(Entity):
+    """A parameter that can be set and used in evaluated code."""
+
+    dataType: "Enum2"
+    name: str
+
+    def __init__(
+        self,
+        dataType: "Enum2",
+        name: str,
+        id: Optional[str] = None,
+        meta: Optional[Dict[str, Any]] = None
+    ) -> None:
+        super().__init__(
+            id=id,
+            meta=meta
+        )
+        if dataType is not None:
+            self.dataType = dataType
+        if name is not None:
+            self.name = name
+
+
 class Periodical(CreativeWork):
     """A periodical publication."""
 
@@ -2039,7 +2064,7 @@ class TableCell(Entity):
 
     content: Array["InlineContent"]
     colspan: Optional[int]
-    kind: Optional["Enum2"]
+    kind: Optional["Enum3"]
     name: Optional[str]
     rowspan: Optional[int]
 
@@ -2048,7 +2073,7 @@ class TableCell(Entity):
         content: Array["InlineContent"],
         colspan: Optional[int] = None,
         id: Optional[str] = None,
-        kind: Optional["Enum2"] = None,
+        kind: Optional["Enum3"] = None,
         meta: Optional[Dict[str, Any]] = None,
         name: Optional[str] = None,
         rowspan: Optional[int] = None
@@ -2073,13 +2098,13 @@ class TableRow(Entity):
     """A row within a Table."""
 
     cells: Array["TableCell"]
-    kind: Optional["Enum3"]
+    kind: Optional["Enum4"]
 
     def __init__(
         self,
         cells: Array["TableCell"],
         id: Optional[str] = None,
-        kind: Optional["Enum3"] = None,
+        kind: Optional["Enum4"] = None,
         meta: Optional[Dict[str, Any]] = None
     ) -> None:
         super().__init__(
