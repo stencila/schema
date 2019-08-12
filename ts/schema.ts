@@ -42,6 +42,8 @@ export const build = async (): Promise<void> => {
           const title = schema.title
           if (title === undefined)
             throw new Error(`Schema title is required in source file: ${file}`)
+          if (file.split('.')[0] !== title)
+            log.warn(`Schema title differs to filename: "${title}" in ${file}`)
           return [title, { ...schema, file }]
         }
       )
@@ -133,7 +135,7 @@ const checkSchema = (schemas: Map<string, Schema>, schema: Schema): boolean => {
 
     if (extends_ !== undefined) {
       if (!schemas.has(extends_))
-        error(`${title}.extends refers to unknown type "${extends_}`)
+        error(`${title}.extends refers to unknown type "${extends_}"`)
     }
 
     // Property schemas have necessary properties
