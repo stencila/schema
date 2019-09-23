@@ -14,6 +14,8 @@ import { read } from './utils'
 
 const DEST_DIR = path.join(__dirname, '..', '..', 'public')
 
+console.log('ts/bindings/jsonld.ts: DEST_DIR is ', DEST_DIR )
+
 export const build = async (): Promise<void> => {
   await fs.ensureDir(DEST_DIR)
 

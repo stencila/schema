@@ -54,6 +54,7 @@ async function docs(): Promise<void> {
 
           // Don't output an HTML file if the Markdown document cannot be decoded into an article
           if (!isArticle(article)) {
+            console.warn("docs.ts:Docs() - !isArticle() -> false")
             return
           }
 
