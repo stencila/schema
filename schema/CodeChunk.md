@@ -10,7 +10,7 @@ A `CodeChunk` has two 'source' properties, `text` and `language`, from which it'
 
 ### `text` and `language`
 
-All `CodeChunk`s are required to have a `text` property, containing the actual code, and most will also specify the programming `language`. If `language` is not specified then it defaults to the language of the previous `CodeChunk` or `CodeExpression` in the document. So, if you are writing a document that only uses one language, you only need to  `For more on these properties see [`Code`](./Code.html).
+All `CodeChunk`s are required to have a `text` property, containing the actual code, and most will also specify the programming `language`. If `language` is not specified then it defaults to the language of the previous `CodeChunk` or `CodeExpression` in the document. So, if you are writing a document that only uses one language, you only need to `For more on these properties see [`Code`](./Code.html).
 
 An example of a simple `CodeChunk`,
 
@@ -72,21 +72,8 @@ imports:
 
 The `declares` property lists the variables that a `CodeChunk` declares. It is used by the compiler to build a graph of the dependencies among `CodeChunk`s and `CodeExpressions`. This in turn allows for reactivity. When a user changes a chunk containing a declaration, all of the other chunks or expressions that use that variable will be rexecuted.
 
-```yaml import=pythonFunction
-type: CodeChunk
-language: python
-text: |
-  def greet(who: str):
-    return 'Hello %s!' % who
-declares:
-  - type: Function
-    name: greet
-    parameters:
-      - type: Parameter
-        name: who
-        schema:
-          - type: StringSchema
-```
+`@100ideas 2019-09-23 (the following block (see commit d4757db) causes encoda.process() to crash so i've made it plaintext)`
+`yaml import=pythonFunction type: CodeChunk language: python text: | def greet(who: str): return 'Hello %s!' % who declares: - type: Function name: greet parameters: - type: Parameter name: who schema: - type: StringSchema`
 
 ### Code comment overrides
 
@@ -116,7 +103,6 @@ Another situation is where you have a function that reads files from the file sy
 #' @reads ./data/all.csv, ./data/categories.csv
 all_data <- special_read_csv('./data/all.csv', './data/categories.csv')
 ```
-
 
 ## Execution properties
 

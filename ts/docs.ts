@@ -19,12 +19,49 @@ import {
   Link,
   link,
   Node,
-  Strong
+  Strong,
+  environment
 } from './types'
 import { isArticle } from './util/guards'
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 docs()
+
+/**
+ * Return array of examples (unparsed yaml string) for given
+ * schemaTitle. Looks for `examples/<schemaTitle>/*.<schemaTitle>.yaml`.
+ *
+ * path-matching w/ globby is not very good yet because some of the examples seem to
+ * have idiosyncratic names in their path.
+ *
+ * aplogies for this terrible typescript, I am not very familiar and just trying
+ * to demonstrate the concept. don't use this for real w/o fixing types.
+ */
+// async function getExamples(schemaTitle: string): Node[] {
+async function getExamples(schemaTitle: string): Promise<any> {
+  // schemaTitle = schemaTitle.toLowerCase();
+  let [first, ...rest] = schemaTitle
+  schemaTitle = first.toLowerCase() + rest.join('')
+
+  const exyamples = await globby(
+    `examples/${schemaTitle}/*.${schemaTitle}.yaml`
+  )
+  // log.info(`@@@@\n looking for:  examples/${schemaTitle}/*.${schemaTitle}.yaml`)
+  if (exyamples.length === 0) return Promise.resolve([])
+
+  //log.info('found examples:\n ' + JSON.stringify(exyamples))
+  //log.info(`exyamples.length: ` + exyamples.length)
+
+  const fileReducer = (acc: any, val: any): any => [
+    ...acc,
+    fs.readFileSync(val, 'utf8').toString()
+  ]
+  const yamls = exyamples.reduce(fileReducer, [])
+  // log.info('\nexamples[0]:\n ' + JSON.stringify(yamls[0]))
+  return Promise.resolve(exyamples.reduce(fileReducer, []))
+  // return Promise.resolve(["test"])
+  // return new Promise( res => res(["test"]))
+}
 
 /**
  * Generate docs for each `public/*.schema.json` file and
@@ -76,7 +113,9 @@ async function docs(): Promise<void> {
             '\n'
         ].join('')
         log.debug(artlog)
+        // log.info(artlog)
 
+        // let them know this file was generated automatically
         const subheadingContent = !mdFileExists
           ? [
               {
@@ -89,6 +128,42 @@ async function docs(): Promise<void> {
               }
             ]
           : []
+
+        // can we find any examples to include?
+        // note: typename -> examples path-matching in getExamples()
+        // is not too reliable
+        const yamlExamples = await getExamples(title)
+        let exampleContent = yamlExamples.map((example: any) => {
+          return {
+            type: 'CodeBlock',
+            programmingLanguage: 'yaml',
+            text: example
+          }
+        })
+        if (exampleContent.length > 0) {
+          exampleContent = [
+            {
+              type: 'Heading',
+              depth: 2,
+              content: ['Examples'],
+              id: 'notice'
+            },
+            {
+              type: 'Heading',
+              depth: 5,
+              content: [
+                `(auto-included from "examples/${title}/*.${title}.yaml")`
+              ],
+              id: 'notice'
+            },
+            ...exampleContent
+          ]
+        }
+
+        if (yamlExamples.length > 0) {
+          log.info('\n\n###### exampleContent ###### \n\n')
+          log.info(JSON.stringify(exampleContent, null, 2))
+        }
 
         const processed = await encodaProcess(
           {
@@ -107,7 +182,8 @@ async function docs(): Promise<void> {
                 ]
               },
               ...subheadingContent,
-              ...(article.content || [])
+              ...(article.content || []),
+              ...exampleContent
             ]
           },
           path.dirname(mdFile)
@@ -121,7 +197,7 @@ async function docs(): Promise<void> {
         log.debug(
           `wrote ${htmlFile}${
             mdFileExists ? '' : ' (stubbed from ' + schemaMdFile
-          }`
+          })`
         )
       } catch (error) {
         console.error(error)

@@ -1,25 +1,155 @@
 ---
-title: Article
 authors: []
+title: Article
 ---
 
 An `Article` type allows you to provide details about a document containing amongst other properties, the content as written prose, executable snippets of code, as well as images.
 
 include: ../public/Article.schema.md
 :::
-| Entity | type | The name of the type and all descendant types. | string |
-| ------------ | -------------- | ----------------------------------------------------------------------------- | ------ |
-| Entity | id | The identifier for this item. | string |
-| Thing | alternateNames | Alternate names (aliases) for the item. | array |
-| Thing | description | A description of the item. | string |
-| Thing | meta | Metadata associated with this item. | object |
-| Thing | name | The name of the item. | string |
-| Thing | url | The URL of the item. | string |
-| CreativeWork | authors | The authors of this this creative work. | array |
-| CreativeWork | citations | Citations or references to other creative works, such as another publication, | |
+An article, including news and scholarly articles.
 
-web page, scholarly article, etc. | array | | CreativeWork | content | The structured content of this creative work c.f. property \`text\`. | array | | CreativeWork | dateCreated | Date/time of creation. | | | CreativeWork | dateModified | Date/time of most recent modification. | | | CreativeWork | datePublished | Date of first publication. | | | CreativeWork | editors | Persons who edited the CreativeWork. | array | | CreativeWork | funders | Person or organisation that funded the CreativeWork. | array | | CreativeWork | isPartOf | An item or other CreativeWork that this CreativeWork is a part of. | | | CreativeWork | licenses | License documents that applies to this content, typically indicated by URL. | array | | CreativeWork | parts | Elements of the collection which can be a variety of different elements, such as Articles, Datatables, Tables and more. | array | | CreativeWork | publisher | A publisher of the CreativeWork. | | | CreativeWork | text | The textual content of this creative work. | string | | CreativeWork | title | | string | | CreativeWork | version | | | | Article | environment | The computational environment in which the document should be executed. | |
+## Properties
+
+| **authors _(required)_** | `codec<csi>` & `array<`​[`Person`](./Person.html) \| [`Organization`](./Organization.html)​`>` | The authors of this creative work.                                                                                      | [CreativeWork](./CreativeWork.html) |
+| ------------------------ | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| **title _(required)_**   | `string` \| `array<`​[`Node`](./Node.html)​`>`                                                 | The title of the creative work.                                                                                         | [CreativeWork](./CreativeWork.html) |
+| **type _(required)_**    | `enum<`​`Article`​`>`                                                                          | The name of the type and all descendant types.                                                                          | [Entity](./Entity.html)             |
+| alternateNames           | `array<`​`string`​`>`                                                                          | Alternate names (aliases) for the item.                                                                                 | [Thing](./Thing.html)               |
+| content                  | `array<`​[`Node`](./Node.html)​`>`                                                             | The structured content of this creative work c.f. property \`text\`.                                                    | [CreativeWork](./CreativeWork.html) |
+| dateCreated              | [`Date`](./Date.html) \| `string<date>` \| `string<date-time>`                                 | Date/time of creation.                                                                                                  | [CreativeWork](./CreativeWork.html) |
+| dateModified             | [`Date`](./Date.html) \| `string<date>` \| `string<date-time>`                                 | Date/time of most recent modification.                                                                                  | [CreativeWork](./CreativeWork.html) |
+| datePublished            | [`Date`](./Date.html) \| `string<date>` \| `string<date-time>`                                 | Date of first publication.                                                                                              | [CreativeWork](./CreativeWork.html) |
+| description              | `string` \| `array<`​[`Node`](./Node.html)​`>`                                                 | A description of the item.                                                                                              | [Thing](./Thing.html)               |
+| editors                  | `array<`​[`Person`](./Person.html)​`>`                                                         | Persons who edited the CreativeWork.                                                                                    | [CreativeWork](./CreativeWork.html) |
+| environment              | [`Environment`](./Environment.html)                                                            | The computational environment in which the document should be executed.                                                 | [Article](./Article.html)           |
+| funders                  | `array<`​[`Person`](./Person.html) \| [`Organization`](./Organization.html)​`>`                | Person or organisation that funded the CreativeWork.                                                                    | [CreativeWork](./CreativeWork.html) |
+| id                       | `string`                                                                                       | The identifier for this item.                                                                                           | [Entity](./Entity.html)             |
+| isPartOf                 | [`CreativeWorkTypes`](./CreativeWorkTypes.html)                                                | An item or other CreativeWork that this CreativeWork is a part of.                                                      | [CreativeWork](./CreativeWork.html) |
+| keywords                 | `codec<csi>` & `array<`​`string`​`>`                                                           | Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.  | [CreativeWork](./CreativeWork.html) |
+| licenses                 | `array<`​`string<uri>` \| [`CreativeWorkTypes`](./CreativeWorkTypes.html)​`>`                  | License documents that applies to this content, typically indicated by URL.                                             | [CreativeWork](./CreativeWork.html) |
+| meta                     | `object`                                                                                       | Metadata associated with this item.                                                                                     | [Entity](./Entity.html)             |
+| name                     | `string`                                                                                       | The name of the item.                                                                                                   | [Thing](./Thing.html)               |
+| parts                    | `array<`​[`CreativeWorkTypes`](./CreativeWorkTypes.html)​`>`                                   | Elements of the collection which can be a variety of different elements, such as Articles, Datatables, Tables and more. | [CreativeWork](./CreativeWork.html) |
+| publisher                | [`Person`](./Person.html) \| [`Organization`](./Organization.html)                             | A publisher of the CreativeWork.                                                                                        | [CreativeWork](./CreativeWork.html) |
+| references               | `array<`​`string` \| [`CreativeWorkTypes`](./CreativeWorkTypes.html)​`>`                       | References to other creative works, such as another publication, web page, scholarly article, etc.                      | [CreativeWork](./CreativeWork.html) |
+| text                     | `string`                                                                                       | The textual content of this creative work.                                                                              | [CreativeWork](./CreativeWork.html) |
+| url                      | `string<uri>`                                                                                  | The URL of the item.                                                                                                    | [Thing](./Thing.html)               |
+| version                  | `string` \| `number`                                                                           | The version of the creative work.                                                                                       | [CreativeWork](./CreativeWork.html) |
+
 :::
+
+# HACK
+
+### Link example json->html convert
+
+```json import=ex12
+{
+  "type": "Link",
+  "content": ["Stencila’s website"],
+  "target": "https://stenci.la"
+}
+```
+
+```html export=ex12
+<a href="https://stenci.la">Stencila’s website</a>
+```
+
+### article example yaml->html convert
+
+```yaml import=ex13
+type: Article
+title: Recherches sur les substances radioactives
+authors:
+  - type: Person
+    honorificPrefix: Dr
+    givenNames:
+      - MarieYAML
+      - lmYWSkłodowska
+    familyNames:
+      - CurieYAM
+    honorificSuffix: PhD
+```
+
+#### yaml -> json
+
+```json export=ex13
+{
+  "type": "Article",
+  "title": "Recherches sur les substances radioactives",
+  "authors": [
+    {
+      "type": "Person",
+      "honorificPrefix": "Dr",
+      "givenNames": ["MarieYAML", "lmYWSkłodowska"],
+      "familyNames": ["CurieYAM"],
+      "honorificSuffix": "PhD"
+    }
+  ]
+}
+```
+
+#### yaml -> html
+
+```html export=ex13
+<article itemtype="https://schema.org/Article" itemscope="true">
+  <h1 itemprop="headline">Recherches sur les substances radioactives</h1>
+  <div>
+    <ol class="authors">
+      <li
+        itemtype="https://schema.org/Person"
+        itemscope="true"
+        itemprop="author"
+      >
+        <span itemprop="name" content="MarieYAML lmYWSkłodowska CurieYAM"
+          ><span itemprop="givenName">MarieYAML lmYWSkłodowska</span
+          ><span itemprop="familyName">CurieYAM</span></span
+        >
+      </li>
+    </ol>
+  </div>
+</article>
+```
+
+### Article example json->html convert
+
+```json import=ex22
+{
+  "type": "Article",
+  "title": "Recherches sur les substances radioactives",
+  "authors": [
+    {
+      "type": "Person",
+      "honorificPrefix": "Dr",
+      "givenNames": ["MarieYAML", "lmYWSkłodowska"],
+      "familyNames": ["CurieYAM"],
+      "honorificSuffix": "PhD"
+    }
+  ]
+}
+```
+
+```html export=ex22
+<article itemtype="https://schema.org/Article" itemscope="true">
+  <h1 itemprop="headline">Recherches sur les substances radioactives</h1>
+  <div>
+    <ol class="authors">
+      <li
+        itemtype="https://schema.org/Person"
+        itemscope="true"
+        itemprop="author"
+      >
+        <span itemprop="name" content="MarieYAML lmYWSkłodowska CurieYAM"
+          ><span itemprop="givenName">MarieYAML lmYWSkłodowska</span
+          ><span itemprop="familyName">CurieYAM</span></span
+        >
+      </li>
+    </ol>
+  </div>
+</article>
+```
+
+##
 
 # Examples
 
@@ -196,21 +326,21 @@ title: Introducing eLife’s first computationally reproducible article
 url: >-
   https://elifesciences.org/labs/ad58f08d/introducing-elife-s-first-computationally-reproducible-article
 authors:
-  - type: Person
-    givenNames:
+  - givenNames:
       - Giuliano
     familyNames:
       - Maciocci
-  - type: Person
-    givenNames:
+    type: Person
+  - givenNames:
       - Michael
     familyNames:
       - Aufreiter
-  - type: Person
-    givenNames:
+    type: Person
+  - givenNames:
       - Nokome
     familyNames:
       - Bentley
+    type: Person
 ---
 
 In September 2017 eLife announced the start of the Reproducible Document Stack (RDS) project, a collaboration between Substance, Stencila and eLife to support the development of an open-source technology stack aimed at enabling researchers to publish reproducible manuscripts through online journals. Reproducible manuscripts enrich the traditional narrative of a research article with code, data and interactive figures that can be executed in the browser, downloaded and explored, giving readers a direct insight into the methods, algorithms and key data behind the published research.
