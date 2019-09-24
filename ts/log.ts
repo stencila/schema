@@ -15,6 +15,7 @@ logga.replaceHandlers((data: logga.LogData): void => {
     // Don't print noisy stack traces
     data.stack = ''
     if (process.env.DEBUG !== undefined) {
+      // `DEBUG=1 npm...` stopped showing log.debug() msgs, not sure why. this fixes...?
       logga.defaultHandler(data, { level: logga.LogLevel.debug })
     } else {
       logga.defaultHandler(data)

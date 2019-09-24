@@ -73,9 +73,13 @@ imports:
 The `declares` property lists the variables that a `CodeChunk` declares. It is used by the compiler to build a graph of the dependencies among `CodeChunk`s and `CodeExpressions`. This in turn allows for reactivity. When a user changes a chunk containing a declaration, all of the other chunks or expressions that use that variable will be rexecuted.
 
 `````
-@100ideas 2019-09-23 - the following block (see commit d4757db) causes encoda.process() to crash so i've made it plaintext. seems to be a problem wi the type: StringSchema on the last line.
+@100ideas 2019-09-23 - the following block (see commit d4757db) causes
+encoda.process() to crash so i've made it plaintext. seems to be a problem
+with the type: StringSchema on the last line.
 
-also as an aside, just learned that a sequence of three (n) backticks ``` can be escaped by enclosing it four (n+1) backticks - this might be helpful in some of the other docs
+also as an aside, just learned that a sequence of three (n) backticks ```
+can be escaped by enclosing it four (n+1) backticks - this might be helpful
+in some of the other md docs
 
   this:               instead of this:
 
