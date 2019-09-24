@@ -19,10 +19,17 @@ import {
   Link,
   link,
   Node,
-  Strong,
-  environment
+  Strong
 } from './types'
 import { isArticle } from './util/guards'
+
+// counts <Type>.schema.yaml -> <Type>.html
+// and number of thses files that were injected w/ examples
+// note... htmlFromYamls >= examplesInserted (count is per 1 insert op)
+const stats = {
+  htmlFromYamls: 0,
+  examplesInserted: 0
+}
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 docs()
@@ -37,9 +44,8 @@ docs()
  * aplogies for this terrible typescript, I am not very familiar and just trying
  * to demonstrate the concept. don't use this for real w/o fixing types.
  */
-// async function getExamples(schemaTitle: string): Node[] {
 async function getExamples(schemaTitle: string): Promise<any> {
-  // schemaTitle = schemaTitle.toLowerCase();
+  // examples are named camelCase but schemaTitle is PascalCase
   let [first, ...rest] = schemaTitle
   schemaTitle = first.toLowerCase() + rest.join('')
 
@@ -48,19 +54,14 @@ async function getExamples(schemaTitle: string): Promise<any> {
   )
   // log.info(`@@@@\n looking for:  examples/${schemaTitle}/*.${schemaTitle}.yaml`)
   if (exyamples.length === 0) return Promise.resolve([])
-
-  //log.info('found examples:\n ' + JSON.stringify(exyamples))
-  //log.info(`exyamples.length: ` + exyamples.length)
+  // log.info('found examples:\n ' + JSON.stringify(exyamples))
 
   const fileReducer = (acc: any, val: any): any => [
     ...acc,
     fs.readFileSync(val, 'utf8').toString()
   ]
   const yamls = exyamples.reduce(fileReducer, [])
-  // log.info('\nexamples[0]:\n ' + JSON.stringify(yamls[0]))
   return Promise.resolve(exyamples.reduce(fileReducer, []))
-  // return Promise.resolve(["test"])
-  // return new Promise( res => res(["test"]))
 }
 
 /**
@@ -98,24 +99,14 @@ async function docs(): Promise<void> {
         }
 
         log.debug(`schema2Article(${jsonFile}) => ${schemaMdFile}`)
-        if (!mdFileExists)
+        if (!mdFileExists) {
+          stats.htmlFromYamls++
           log.info(
-            `${maybeMdFile} doc not found; stubbing html from schema2Article(${mdFile})`
+            `(${stats.htmlFromYamls})${maybeMdFile} doc not found; stubbing html from schema2Article(${mdFile})`
           )
+        }
 
-        const artlog = [
-          `found "${mdFile}" (isArticle?: ${isArticle(article)})`,
-          `\n\t${JSON.stringify(article).substr(0, 80)}...)`,
-          '\n\t- status: ' + schema.status,
-          '\n\t- role: ' + schema.role,
-          '\n\t- article.content:\n' +
-            JSON.stringify(article.content).substr(0, 120) +
-            '\n'
-        ].join('')
-        log.debug(artlog)
-        // log.info(artlog)
-
-        // let them know this file was generated automatically
+        // dom fragment to let readers know this file was generated automatically
         const subheadingContent = !mdFileExists
           ? [
               {
@@ -130,8 +121,8 @@ async function docs(): Promise<void> {
           : []
 
         // can we find any examples to include?
-        // note: typename -> examples path-matching in getExamples()
-        // is not too reliable
+        // note: path-matching in getExamples() that looks for .yaml examples
+        // is not too reliable b/c I am not sure what the naming pattern is
         const yamlExamples = await getExamples(title)
         let exampleContent = yamlExamples.map((example: any) => {
           return {
@@ -159,11 +150,7 @@ async function docs(): Promise<void> {
             ...exampleContent
           ]
         }
-
-        if (yamlExamples.length > 0) {
-          log.info('\n\n###### exampleContent ###### \n\n')
-          log.info(JSON.stringify(exampleContent, null, 2))
-        }
+        if (yamlExamples.length > 0) stats.examplesInserted++
 
         const processed = await encodaProcess(
           {
@@ -203,6 +190,10 @@ async function docs(): Promise<void> {
         console.error(error)
       }
     })
+  )
+
+  log.info(
+    'automatic content inclusion stats:' + JSON.stringify(stats, null, 2)
   )
 
   // Cover over any files generated during processing
