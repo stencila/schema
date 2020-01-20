@@ -12,9 +12,3 @@ properties:
       The computational environment in which the document should be executed.
     allOf:
       - $ref: SoftwareEnvironment
-
-required:
-  # See Google's list of required properties at
-  # https://developers.google.com/search/docs/data-types/article#article_types
-  - authors
-  - title
