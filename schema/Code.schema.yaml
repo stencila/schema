@@ -1,0 +1,18 @@
+title: Code
+'@id': stencila:Code
+extends: Entity
+role: secondary
+status: stable
+category: code
+description: Inline code.
+properties:
+  programmingLanguage:
+    '@id': schema:programmingLanguage
+    description: The programming language of the code.
+    type: string
+  text:
+    '@id': schema:text
+    description: The text of the code.
+    type: string
+required:
+  - text

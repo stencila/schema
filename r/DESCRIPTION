@@ -1,0 +1,23 @@
+Package: stencilaschema
+Title: R bindings for Stencila Schema
+Description: R classes for each of the types in the Stencila Schema.
+Authors@R: c(
+    person("Nokome", "Bentley", email = "nokome@stenci.la", role = c("aut", "cre"))
+  )
+URL: https://github.com/stencila/schema#readme
+BugReports: https://github.com/stencila/schema/issues
+License: file LICENSE
+Version: 0.0.1
+Encoding: UTF-8
+Suggests:
+    covr,
+    devtools,
+    lintr,
+    pkgdown,
+    roxygen2,
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2.9000
+Collate:
+    'typing.R'
+    'types.R'

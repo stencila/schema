@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.Rproj.user
+*.out.*
+/coverage
+/dist
+/node_modules
+/public
+/ts/types.ts
+/ts/util/type-maps.ts

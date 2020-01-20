@@ -1,0 +1,26 @@
+title: InlineContent
+category: prose
+description: Union type for valid inline content.
+$comment: |
+  Note that this definition currently does not include
+  `array` and `object` nodes (which are included in `Node`).
+  This seems incongruent, and may be changed in the future.
+anyOf:
+  - type: 'null'
+  - type: boolean
+  - type: integer
+  - type: number
+  - type: string
+  - $ref: CodeFragment
+  - $ref: CodeExpression
+  - $ref: Delete
+  - $ref: Emphasis
+  - $ref: ImageObject
+  - $ref: Link
+  - $ref: MathFragment
+  - $ref: Quote
+  - $ref: Strong
+  - $ref: Subscript
+  - $ref: Superscript
+  - $ref: Cite
+  - $ref: CiteGroup

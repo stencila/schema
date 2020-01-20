@@ -1,0 +1,12 @@
+title: Node
+category: metadata
+description: Union type for all valid nodes.
+anyOf:
+  - type: 'null'
+  - type: boolean
+  - type: number
+  - type: integer
+  - type: string
+  - type: array
+  - type: object
+  - $ref: Entity

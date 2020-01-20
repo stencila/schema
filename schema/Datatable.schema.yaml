@@ -1,0 +1,16 @@
+title: Datatable
+'@id': stencila:Datatable
+extends: CreativeWork
+role: primary
+status: unstable
+category: data
+description: A table of data.
+properties:
+  columns:
+    '@id': stencila:columns
+    description: The columns of data.
+    type: array
+    items:
+      $ref: DatatableColumn
+required:
+  - columns

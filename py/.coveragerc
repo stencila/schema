@@ -1,0 +1,3 @@
+[execute_document]
+omit =
+    */stencila/schema/types.py

@@ -1,0 +1,21 @@
+title: SoftwareApplication
+'@id': schema:SoftwareApplication
+extends: CreativeWork
+role: primary
+status: unstable
+category: code
+description: |
+  A software application.
+properties:
+  softwareRequirements:
+    '@id': schema:softwareRequirements
+    description: |
+      Requirements for application, including shared libraries that
+      are not included in the application distribution.
+    type: array
+    items:
+      - $ref: SoftwareApplication
+  softwareVersion:
+    '@id': schema:softwareVersion
+    description: Version of the software.
+    type: string

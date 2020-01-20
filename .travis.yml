@@ -1,0 +1,104 @@
+matrix:
+  include:
+    # Test Typescript package
+    - stage: test
+      language: node_js
+      node_js: '10'
+
+      script:
+        - npm run lint
+        - npm run build
+        - npm run test:cover
+        - npm run docs
+
+      after_success:
+        - bash <(curl -s https://codecov.io/bash) -cF ts
+
+    # Test Python package
+    - stage: test
+      language: python
+      python: '3.7'
+      dist: xenial
+
+      install:
+        - make -C py setup
+        - make -C py install
+
+      script:
+        - make -C py lint
+        - make -C py test
+
+      after_success:
+        - bash <(curl -s https://codecov.io/bash) -cF py
+
+    # Test R package
+    - stage: test
+      language: r
+      r: release
+
+      before_install:
+        - cd r
+
+      script:
+        - make lint
+        - make test
+        - make build
+        - make docs
+
+      after_success:
+        - Rscript -e 'covr::codecov()'
+
+    # The following deployment jobs will only run if all of
+    # the above test jobs have passed
+
+    # Deploy NPM package and create a release
+    - stage: deploy
+      language: node_js
+      node_js: '10'
+
+      script:
+        - npm run build
+        - npm run docs
+
+      deploy:
+        # Deploy a new version of NPM package and create a Github release
+        # This creates a new version tag, which will then trigger the
+        # following deploy jobs for other language packages.
+        - provider: script
+          skip_cleanup: true
+          script: npx semantic-release
+
+        # Deploy documentation to Github Pages
+        # See https://docs.travis-ci.com/user/deployment/pages/
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          local_dir: public
+          on:
+            branch: master
+
+    # Deploy Python package
+    - stage: deploy
+      language: python
+      python: '3.7'
+      dist: xenial
+
+      install:
+        - make -C py setup
+
+      script:
+        - echo "Nothing to do; just deploying"
+
+      after_success:
+        # Clear package.json overrides made when installing @stencila/dev-config
+        - git checkout package.json
+
+      before_deploy:
+        - cd py
+
+      deploy:
+        provider: pypi
+        username: $PYPI_USERNAME
+        password: $PYPI_PASSWORD
+        on:
+          tags: true

@@ -1,0 +1,5 @@
+mypy
+pylint
+tox
+tox-travis
+twine

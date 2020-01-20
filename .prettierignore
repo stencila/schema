@@ -1,0 +1,8 @@
+CHANGELOG.md
+coverage
+dist
+node_modules
+public
+__file_snapshots__
+.mypy_cache
+.tox
