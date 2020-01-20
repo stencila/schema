@@ -110,7 +110,7 @@ async function build(): Promise<void> {
   )) as Article
   const readmeContent = readme.content !== undefined ? readme.content : []
 
-  const indexPage = article([], {
+  const indexPage = article({
     title: 'Stencila Schema',
     content: [
       ...readmeContent,
@@ -258,7 +258,7 @@ function schema2MainArticle(schema: Schema, summaryArticle?: Article): Article {
       ? summaryArticle
       : schema2SummaryArticle(schema)
 
-  return article([], {
+  return article({
     title,
     content: [
       ...summary,
@@ -317,7 +317,7 @@ function schema2SummaryArticle(schema: Schema): Article {
       ])
     })
 
-  return article([], {
+  return article({
     title,
     content: [
       heading(['Description'], { depth: 2 }),

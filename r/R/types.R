@@ -324,17 +324,17 @@ CodeExpression <- function(
 #' An error that occured when parsing, compiling or executing some Code.
 #'
 #' @name CodeError
-#' @param kind The type of error. \bold{Required}.
+#' @param message The error message or brief description of the error. \bold{Required}.
+#' @param errorType The type of error.
 #' @param id The identifier for this item.
-#' @param message The error message or brief description of the error.
 #' @param meta Metadata associated with this item.
 #' @param trace Stack trace leading up to the error.
 #' @seealso \code{\link{Entity}}
 #' @export
 CodeError <- function(
-  kind,
-  id,
   message,
+  errorType,
+  id,
   meta,
   trace
 ){
@@ -343,8 +343,8 @@ CodeError <- function(
     meta = meta
   )
   self$type <- as_scalar("CodeError")
-  self[["kind"]] <- check_property("CodeError", "kind", TRUE, missing(kind), "character", kind)
-  self[["message"]] <- check_property("CodeError", "message", FALSE, missing(message), "character", message)
+  self[["message"]] <- check_property("CodeError", "message", TRUE, missing(message), "character", message)
+  self[["errorType"]] <- check_property("CodeError", "errorType", FALSE, missing(errorType), "character", errorType)
   self[["trace"]] <- check_property("CodeError", "trace", FALSE, missing(trace), "character", trace)
   class(self) <- c(class(self), "CodeError")
   self
@@ -672,9 +672,8 @@ CreativeWork <- function(
 #' An article, including news and scholarly articles.
 #'
 #' @name Article
-#' @param authors The authors of this creative work. \bold{Required}.
-#' @param title The title of the creative work. \bold{Required}.
 #' @param alternateNames Alternate names (aliases) for the item.
+#' @param authors The authors of this creative work.
 #' @param content The structured content of this creative work c.f. property `text`.
 #' @param dateCreated Date/time of creation.
 #' @param dateModified Date/time of most recent modification.
@@ -693,14 +692,14 @@ CreativeWork <- function(
 #' @param publisher A publisher of the CreativeWork.
 #' @param references References to other creative works, such as another publication, web page, scholarly article, etc.
 #' @param text The textual content of this creative work.
+#' @param title The title of the creative work.
 #' @param url The URL of the item.
 #' @param version The version of the creative work.
 #' @seealso \code{\link{CreativeWork}}
 #' @export
 Article <- function(
-  authors,
-  title,
   alternateNames,
+  authors,
   content,
   dateCreated,
   dateModified,
@@ -719,13 +718,13 @@ Article <- function(
   publisher,
   references,
   text,
+  title,
   url,
   version
 ){
   self <- CreativeWork(
-    authors = authors,
-    title = title,
     alternateNames = alternateNames,
+    authors = authors,
     content = content,
     dateCreated = dateCreated,
     dateModified = dateModified,
@@ -743,12 +742,11 @@ Article <- function(
     publisher = publisher,
     references = references,
     text = text,
+    title = title,
     url = url,
     version = version
   )
   self$type <- as_scalar("Article")
-  self[["authors"]] <- check_property("Article", "authors", TRUE, missing(authors), Array(Union(Person, Organization)), authors)
-  self[["title"]] <- check_property("Article", "title", TRUE, missing(title), Union("character", Array(Node)), title)
   self[["environment"]] <- check_property("Article", "environment", FALSE, missing(environment), SoftwareEnvironment, environment)
   class(self) <- c(class(self), "Article")
   self
@@ -1273,17 +1271,17 @@ Figure <- function(
 #' A function with a name, which might take Parameters and return a value of a certain type.
 #'
 #' @name Function
-#' @param name The name of the function. \bold{Required}.
 #' @param id The identifier for this item.
 #' @param meta Metadata associated with this item.
-#' @param parameters An array of parameters the function exsists.
+#' @param name The name of the function.
+#' @param parameters An array of parameters the function exists.
 #' @param returns The return type of the function.
 #' @seealso \code{\link{Entity}}
 #' @export
 Function <- function(
-  name,
   id,
   meta,
+  name,
   parameters,
   returns
 ){
@@ -1292,7 +1290,7 @@ Function <- function(
     meta = meta
   )
   self$type <- as_scalar("Function")
-  self[["name"]] <- check_property("Function", "name", TRUE, missing(name), "character", name)
+  self[["name"]] <- check_property("Function", "name", FALSE, missing(name), "character", name)
   self[["parameters"]] <- check_property("Function", "parameters", FALSE, missing(parameters), Array(Parameter), parameters)
   self[["returns"]] <- check_property("Function", "returns", FALSE, missing(returns), SchemaTypes, returns)
   class(self) <- c(class(self), "Function")
@@ -1304,7 +1302,7 @@ Function <- function(
 #'
 #' @name Heading
 #' @param content Content of the heading. \bold{Required}.
-#' @param depth The depth of the heading. \bold{Required}.
+#' @param depth The depth of the heading.
 #' @param id The identifier for this item.
 #' @param meta Metadata associated with this item.
 #' @seealso \code{\link{Entity}}
@@ -1321,7 +1319,7 @@ Heading <- function(
   )
   self$type <- as_scalar("Heading")
   self[["content"]] <- check_property("Heading", "content", TRUE, missing(content), Array(InlineContent), content)
-  self[["depth"]] <- check_property("Heading", "depth", TRUE, missing(depth), "numeric", depth)
+  self[["depth"]] <- check_property("Heading", "depth", FALSE, missing(depth), "numeric", depth)
   class(self) <- c(class(self), "Heading")
   self
 }

@@ -298,15 +298,15 @@ class CodeExpression(CodeFragment):
 class CodeError(Entity):
     """An error that occured when parsing, compiling or executing some Code."""
 
-    kind: str
-    message: Optional[str] = None
+    message: str
+    errorType: Optional[str] = None
     trace: Optional[str] = None
 
     def __init__(
         self,
-        kind: str,
+        message: str,
+        errorType: Optional[str] = None,
         id: Optional[str] = None,
-        message: Optional[str] = None,
         meta: Optional[Dict[str, Any]] = None,
         trace: Optional[str] = None
     ) -> None:
@@ -314,10 +314,10 @@ class CodeError(Entity):
             id=id,
             meta=meta
         )
-        if kind is not None:
-            self.kind = kind
         if message is not None:
             self.message = message
+        if errorType is not None:
+            self.errorType = errorType
         if trace is not None:
             self.trace = trace
 
@@ -612,15 +612,12 @@ class CreativeWork(Thing):
 class Article(CreativeWork):
     """An article, including news and scholarly articles."""
 
-    authors: Array[Union["Person", "Organization"]]
-    title: Union[str, Array["Node"]]
     environment: Optional["SoftwareEnvironment"] = None
 
     def __init__(
         self,
-        authors: Array[Union["Person", "Organization"]],
-        title: Union[str, Array["Node"]],
         alternateNames: Optional[Array[str]] = None,
+        authors: Optional[Array[Union["Person", "Organization"]]] = None,
         content: Optional[Array["Node"]] = None,
         dateCreated: Optional[Union["Date", str]] = None,
         dateModified: Optional[Union["Date", str]] = None,
@@ -639,13 +636,13 @@ class Article(CreativeWork):
         publisher: Optional[Union["Person", "Organization"]] = None,
         references: Optional[Array[Union[str, "CreativeWorkTypes"]]] = None,
         text: Optional[str] = None,
+        title: Optional[Union[str, Array["Node"]]] = None,
         url: Optional[str] = None,
         version: Optional[Union[str, float]] = None
     ) -> None:
         super().__init__(
-            authors=authors,
-            title=title,
             alternateNames=alternateNames,
+            authors=authors,
             content=content,
             dateCreated=dateCreated,
             dateModified=dateModified,
@@ -663,13 +660,10 @@ class Article(CreativeWork):
             publisher=publisher,
             references=references,
             text=text,
+            title=title,
             url=url,
             version=version
         )
-        if authors is not None:
-            self.authors = authors
-        if title is not None:
-            self.title = title
         if environment is not None:
             self.environment = environment
 
@@ -1067,15 +1061,15 @@ class Function(Entity):
     certain type.
     """
 
-    name: str
+    name: Optional[str] = None
     parameters: Optional[Array["Parameter"]] = None
     returns: Optional["SchemaTypes"] = None
 
     def __init__(
         self,
-        name: str,
         id: Optional[str] = None,
         meta: Optional[Dict[str, Any]] = None,
+        name: Optional[str] = None,
         parameters: Optional[Array["Parameter"]] = None,
         returns: Optional["SchemaTypes"] = None
     ) -> None:
@@ -1095,12 +1089,12 @@ class Heading(Entity):
     """Heading"""
 
     content: Array["InlineContent"]
-    depth: float
+    depth: Optional[float] = None
 
     def __init__(
         self,
         content: Array["InlineContent"],
-        depth: float,
+        depth: Optional[float] = None,
         id: Optional[str] = None,
         meta: Optional[Dict[str, Any]] = None
     ) -> None:
