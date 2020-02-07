@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:multipleOf",
+  "@type": "schema:Property",
+  "schema:name": "multipleOf",
+  "schema:description": "A number that a numeric node must be a multiple of.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:IntegerValidator"
+    },
+    {
+      "@id": "stencila:NumberValidator"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:citationSuffix",
+  "@type": "schema:Property",
+  "schema:name": "suffix",
+  "schema:description": "A suffix to show after the citation.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Cite"
+    }
+  ]
+}

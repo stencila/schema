@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:StringValidator",
+  "@type": "schema:Class",
+  "schema:name": "StringValidator",
+  "schema:description": "A schema specifying constraints on a string node."
+}

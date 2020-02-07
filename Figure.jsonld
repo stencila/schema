@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Figure",
+  "@type": "schema:Class",
+  "schema:name": "Figure",
+  "schema:description": "Encapsulates one or more images, videos, tables, etc, and provides captions and labels for them."
+}

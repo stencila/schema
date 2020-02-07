@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:extends",
+  "@type": "schema:Property",
+  "schema:name": "extends",
+  "schema:description": "Indicates that this parameter is variadic and can accept multiple named arguments.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Parameter"
+    },
+    {
+      "@id": "stencila:SoftwareEnvironment"
+    }
+  ]
+}

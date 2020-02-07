@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:citationPrefix",
+  "@type": "schema:Property",
+  "schema:name": "prefix",
+  "schema:description": "A prefix to show before the citation.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Cite"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "title": "CodeBlock",
+  "@id": "stencila:CodeBlock",
+  "extends": "Code",
+  "role": "secondary",
+  "status": "stable",
+  "category": "code",
+  "description": "A code block.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "CodeBlock",
+        "CodeChunk"
+      ],
+      "default": "CodeBlock",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "programmingLanguage": {
+      "@id": "schema:programmingLanguage",
+      "description": "The programming language of the code.",
+      "type": "string",
+      "from": "Code"
+    },
+    "format": {
+      "@id": "schema:encodingFormat",
+      "aliases": [
+        "encoding",
+        "encodingFormat"
+      ],
+      "description": "Media type, typically expressed using a MIME format, of the code.",
+      "$comment": "This property allows the differentiation of formats using the same programming language\nor variants of a programming language. An example is using `programmingLanguage` \"json\" and\n`encodingFormat` \"application/ld+json\" for JSON-LD code examples.\n",
+      "type": "string",
+      "from": "Code"
+    },
+    "text": {
+      "@id": "schema:text",
+      "description": "The text of the code.",
+      "type": "string",
+      "from": "Code"
+    },
+    "exportFrom": {
+      "@id": "stencila:exportFrom",
+      "aliases": [
+        "export"
+      ],
+      "description": "A compilation directive giving the name of the variable to export\ninto the content of the code block.\n",
+      "type": "string",
+      "from": "CodeBlock"
+    },
+    "importTo": {
+      "@id": "stencila:importTo",
+      "aliases": [
+        "export"
+      ],
+      "description": "A compilation directive giving the name of the variable to import\nthe content of the code block as.\n",
+      "type": "string",
+      "from": "CodeBlock"
+    }
+  },
+  "file": "CodeBlock.schema.yaml",
+  "children": [
+    "CodeChunk"
+  ],
+  "descendants": [
+    "CodeChunk"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/CodeBlock.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/CodeBlock.schema.yaml",
+  "type": "object",
+  "propertyAliases": {
+    "encoding": "format",
+    "encodingFormat": "format",
+    "export": "importTo"
+  },
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "text"
+  ]
+}

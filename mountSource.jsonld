@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:mountSource",
+  "@type": "schema:Property",
+  "schema:name": "mountSource",
+  "schema:description": "The mount source directory on the host.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:VolumeMount"
+    }
+  ]
+}

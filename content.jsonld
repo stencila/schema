@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:content",
+  "@type": "schema:Property",
+  "schema:name": "content",
+  "schema:description": "The structured content of this creative work c.f. property `text`.",
+  "schema:domainIncludes": [
+    {
+      "@id": "schema:Article"
+    },
+    {
+      "@id": "schema:AudioObject"
+    },
+    {
+      "@id": "stencila:Cite"
+    },
+    {
+      "@id": "schema:Collection"
+    },
+    {
+      "@id": "schema:CreativeWork"
+    },
+    {
+      "@id": "stencila:Datatable"
+    },
+    {
+      "@id": "stencila:Delete"
+    },
+    {
+      "@id": "stencila:Emphasis"
+    },
+    {
+      "@id": "stencila:Figure"
+    },
+    {
+      "@id": "stencila:Heading"
+    },
+    {
+      "@id": "schema:ImageObject"
+    },
+    {
+      "@id": "stencila:Include"
+    },
+    {
+      "@id": "stencila:Link"
+    },
+    {
+      "@id": "schema:ListItem"
+    },
+    {
+      "@id": "stencila:Mark"
+    },
+    {
+      "@id": "schema:MediaObject"
+    },
+    {
+      "@id": "stencila:Paragraph"
+    },
+    {
+      "@id": "schema:Periodical"
+    },
+    {
+      "@id": "schema:PublicationIssue"
+    },
+    {
+      "@id": "schema:PublicationVolume"
+    },
+    {
+      "@id": "stencila:Quote"
+    },
+    {
+      "@id": "stencila:QuoteBlock"
+    },
+    {
+      "@id": "schema:SoftwareApplication"
+    },
+    {
+      "@id": "schema:SoftwareSourceCode"
+    },
+    {
+      "@id": "stencila:Strong"
+    },
+    {
+      "@id": "stencila:Subscript"
+    },
+    {
+      "@id": "stencila:Superscript"
+    },
+    {
+      "@id": "schema:Table"
+    },
+    {
+      "@id": "stencila:TableCell"
+    },
+    {
+      "@id": "schema:VideoObject"
+    }
+  ]
+}

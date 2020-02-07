@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:uses",
+  "@type": "schema:Property",
+  "schema:name": "uses",
+  "schema:description": "Names of variables that the code chunk uses (but does not alter).",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeChunk"
+    }
+  ]
+}

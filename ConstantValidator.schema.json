@@ -1,0 +1,56 @@
+{
+  "title": "ConstantValidator",
+  "@id": "stencila:ConstantValidator",
+  "extends": "Entity",
+  "role": "validation",
+  "status": "unstable",
+  "category": "data",
+  "description": "A validator specifying a constant value that a node must have.",
+  "$comment": "A node will be valid against this validator if it is equal to the\n`value` property. Analogous to the JSON Schema [`const` keyword](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6.1.3).\n",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "ConstantValidator"
+      ],
+      "default": "ConstantValidator",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "value": {
+      "@id": "schema:value",
+      "description": "The value that the node must have.",
+      "allOf": [
+        {
+          "$ref": "Node.schema.json"
+        }
+      ],
+      "from": "ConstantValidator"
+    }
+  },
+  "file": "ConstantValidator.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/ConstantValidator.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/ConstantValidator.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type"
+  ],
+  "propertyAliases": {}
+}

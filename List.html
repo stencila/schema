@@ -1,0 +1,234 @@
+<html>
+
+  <head>
+    <title>List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/@stencila/thema@1/dist/themes/stencila/styles.css"
+      rel="stylesheet">
+    <script src="https://unpkg.com/@stencila/thema@1/dist/themes/stencila/index.js"
+      type="text/javascript"></script>
+    <script
+      src="https://unpkg.com/@stencila/components@&lt;=1/dist/stencila-components/stencila-components.esm.js"
+      type="module"></script>
+    <script
+      src="https://unpkg.com/@stencila/components@&lt;=1/dist/stencila-components/stencila-components.js"
+      type="text/javascript"></script>
+  </head>
+
+  <body>
+    <article itemscope="" itemtype="http://schema.org/Article">
+      <div itemscope="" itemtype="http://schema.org/Organization" itemprop="publisher">
+        <meta itemprop="name" content="Unknown">
+        <div itemscope="" itemtype="http://schema.org/ImageObject" itemprop="logo">
+          <meta itemprop="url"
+            content="https://via.placeholder.com/600x60/dbdbdb/4a4a4a.png?text=Unknown"
+            src="https://via.placeholder.com/600x60/dbdbdb/4a4a4a.png?text=Unknown">
+        </div>
+      </div>
+      <h1 itemprop="headline">List</h1>
+      <meta itemprop="image"
+        content="https://via.placeholder.com/1200x714/dbdbdb/4a4a4a.png?text=List">
+      <div itemscope="" itemtype="http://schema.stenci.la/Include">
+        <div itemprop="content">
+          <p itemscope="" itemtype="http://schema.stenci.la/Paragraph">A list of items.</p>
+          <table itemscope="" itemtype="http://schema.org/Table">
+            <tbody>
+              <tr itemscope="" itemtype="http://schema.stenci.la/TableRow">
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">Entity</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">type</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">The name of the type
+                  and all descendant types.</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">string</td>
+              </tr>
+              <tr itemscope="" itemtype="http://schema.stenci.la/TableRow">
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">Entity</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">id</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">The identifier for
+                  this item.</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">string</td>
+              </tr>
+              <tr itemscope="" itemtype="http://schema.stenci.la/TableRow">
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">List</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">items</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">The items in the list
+                </td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">array</td>
+              </tr>
+              <tr itemscope="" itemtype="http://schema.stenci.la/TableRow">
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">List</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">order</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell">Type of ordering.</td>
+                <td itemscope="" itemtype="http://schema.stenci.la/TableCell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph">The <code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">List</code> schema represents a collection
+        of items, which can be ordered or unordered.</p>
+      <h1 itemscope="" itemtype="http://schema.stenci.la/Heading" id="examples">Examples</h1>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="unordered">Unordered</h2>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph">If an <code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">order</code> field is not defined, the
+        list is assumed to be <code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">unordered</code>.</p>
+      <pre data-import="unordered" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-json" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">{
+  &quot;type&quot;: &quot;List&quot;,
+  &quot;items&quot;: [
+    { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Item One&quot;] },
+    { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Item Two&quot;] },
+    { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Item Three&quot;] }
+  ]
+}</code></pre>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading"
+        id="nested-ordered-list-inside-an-unordered-list">Nested Ordered List Inside an Unordered
+        List</h2>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph">A <a href="/schema/ListItem"
+          itemscope="" itemtype="http://schema.stenci.la/Link"><code itemscope=""
+            itemtype="http://schema.stenci.la/CodeFragment">ListItem</code></a> can contain any
+        valid <code itemscope="" itemtype="http://schema.stenci.la/CodeFragment">Node</code>,
+        meaning that lists can be nested and/or contain other block elements.</p>
+      <pre data-import="nested" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-json" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">{
+  &quot;type&quot;: &quot;List&quot;,
+  &quot;items&quot;: [
+    { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: &quot;Item One&quot; },
+    {
+      &quot;type&quot;: &quot;ListItem&quot;,
+      &quot;content&quot;: [
+        &quot;This is a nested item&quot;,
+        {
+          &quot;type&quot;: &quot;List&quot;,
+          &quot;order&quot;: &quot;ordered&quot;,
+          &quot;items&quot;: [
+            { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Nested Item One&quot;] },
+            { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Nested Item Two&quot;] },
+            { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Nested Item Three&quot;] }
+          ]
+        }
+      ]
+    },
+    { &quot;type&quot;: &quot;ListItem&quot;, &quot;content&quot;: [&quot;Item Three&quot;] }
+  ]
+}</code></pre>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="checklist">Checklist</h2>
+      <pre data-import="checklist" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-json" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">{
+  &quot;type&quot;: &quot;List&quot;,
+  &quot;items&quot;: [
+    {
+      &quot;type&quot;: &quot;ListItem&quot;,
+      &quot;checked&quot;: false,
+      &quot;content&quot;: [&quot;Todo item&quot;]
+    },
+    {
+      &quot;type&quot;: &quot;ListItem&quot;,
+      &quot;checked&quot;: true,
+      &quot;content&quot;: [&quot;Completed todo item&quot;]
+    }
+  ]
+}</code></pre>
+      <h1 itemscope="" itemtype="http://schema.stenci.la/Heading" id="encodings">Encodings</h1>
+      <div itemscope="" itemtype="http://schema.stenci.la/Include">
+        <div itemprop="content">
+          <p itemscope="" itemtype="http://schema.stenci.la/Paragraph">This section describes common
+            encodings for this node type. These samples are generated from the above examples by <a
+              href="https://stencila.github.io/encoda" itemscope=""
+              itemtype="http://schema.stenci.la/Link">Encoda</a>, but you can also author them in
+            each format.</p>
+        </div>
+      </div>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="json">JSON</h2>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="jats">JATS</h2>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph"><code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">List</code> is analogous, and structurally
+        similar to, the JATS <a
+          href="https://jats.nlm.nih.gov/articleauthoring/tag-library/1.2/element/list.html"
+          itemscope="" itemtype="http://schema.stenci.la/Link"><code itemscope=""
+            itemtype="http://schema.stenci.la/CodeFragment">&lt;list&gt;</code></a> type. Note that
+        JATS type requires the <code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">List</code> to contain at least one list
+        item, but the Stencila equivalent can be empty.</p>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading" id="unordered-1">Unordered</h3>
+      <pre data-export="unordered" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-jats" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">&lt;list list-type=&quot;bullet&quot;&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Item One&lt;/p&gt;
+  &lt;/list-item&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Item Two&lt;/p&gt;
+  &lt;/list-item&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Item Three&lt;/p&gt;
+  &lt;/list-item&gt;
+&lt;/list&gt;
+</code></pre>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading"
+        id="nested-ordered-list-inside-an-unordered-list-1">Nested Ordered List Inside an Unordered
+        List</h3>
+      <pre data-export="nested" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-jats" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">&lt;list list-type=&quot;bullet&quot;&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Item One&lt;/p&gt;
+  &lt;/list-item&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;This is a nested item&lt;/p&gt;
+    &lt;list list-type=&quot;bullet&quot;&gt;
+      &lt;list-item&gt;
+        &lt;p&gt;Nested Item One&lt;/p&gt;
+      &lt;/list-item&gt;
+      &lt;list-item&gt;
+        &lt;p&gt;Nested Item Two&lt;/p&gt;
+      &lt;/list-item&gt;
+      &lt;list-item&gt;
+        &lt;p&gt;Nested Item Three&lt;/p&gt;
+      &lt;/list-item&gt;
+    &lt;/list&gt;
+  &lt;/list-item&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Item Three&lt;/p&gt;
+  &lt;/list-item&gt;
+&lt;/list&gt;
+</code></pre>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading" id="checklist-1">Checklist</h3>
+      <pre data-export="checklist" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-jats" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">&lt;list list-type=&quot;bullet&quot;&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Todo item&lt;/p&gt;
+  &lt;/list-item&gt;
+  &lt;list-item&gt;
+    &lt;p&gt;Completed todo item&lt;/p&gt;
+  &lt;/list-item&gt;
+&lt;/list&gt;
+</code></pre>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="mdast">mdast</h2>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph"><code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">List</code> is analogous to the mdast <a
+          href="https://github.com/syntax-tree/mdast#list" itemscope=""
+          itemtype="http://schema.stenci.la/Link"><code itemscope=""
+            itemtype="http://schema.stenci.la/CodeFragment">List</code></a> node type.</p>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading" id="unordered-2">Unordered</h3>
+      <pre data-export="unordered" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-markdown" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">- [ ]
+- [ ]
+- [ ]</code></pre>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading"
+        id="nested-ordered-list-inside-an-unordered-list-2">Nested Ordered List Inside an Unordered
+        List</h3>
+      <pre data-export="nested" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-markdown" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">- [ ]
+- [ ] ## -
+  -
+- [ ]</code></pre>
+      <h3 itemscope="" itemtype="http://schema.stenci.la/Heading" id="checklist-2">Checklist</h3>
+      <pre data-export="checklist" itemscope="" itemtype="http://schema.stenci.la/CodeBlock"><code class="language-markdown" itemscope="" itemtype="http://schema.stenci.la/CodeFragment">- [ ]
+- [x]</code></pre>
+      <h2 itemscope="" itemtype="http://schema.stenci.la/Heading" id="opendocument">OpenDocument
+      </h2>
+      <p itemscope="" itemtype="http://schema.stenci.la/Paragraph"><code itemscope=""
+          itemtype="http://schema.stenci.la/CodeFragment">List</code> is analogous to the
+        OpenDocument <a
+          href="http://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part1.html#__RefHeading__1415148_253892949"
+          itemscope="" itemtype="http://schema.stenci.la/Link"><code itemscope=""
+            itemtype="http://schema.stenci.la/CodeFragment">&lt;text:list&gt;</code></a> element.
+      </p>
+    </article>
+  </body>
+
+</html>

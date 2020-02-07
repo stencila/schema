@@ -1,0 +1,46 @@
+{
+  "title": "BooleanValidator",
+  "@id": "stencila:BooleanValidator",
+  "extends": "Entity",
+  "role": "validation",
+  "status": "unstable",
+  "category": "data",
+  "description": "A schema specifying that a node must be a boolean value.",
+  "$comment": "A node will be valid against this schema if it is either `true` or `false.\nAnalogous to the JSON Schema `boolean` validation [type](https://json-schema.org/draft/2019-09/json-schema-validation.html#rfc.section.6.1.1).\n",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "BooleanValidator"
+      ],
+      "default": "BooleanValidator",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    }
+  },
+  "file": "BooleanValidator.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/BooleanValidator.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/BooleanValidator.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type"
+  ],
+  "propertyAliases": {}
+}

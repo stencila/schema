@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:timeoutRequest",
+  "@type": "schema:Property",
+  "schema:name": "timeoutRequest",
+  "schema:description": "The inactivity timeout (seconds) requested for the session.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

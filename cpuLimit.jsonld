@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:cpuLimit",
+  "@type": "schema:Property",
+  "schema:name": "cpuLimit",
+  "schema:description": "The amount of CPU the session is limited to.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

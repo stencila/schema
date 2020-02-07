@@ -1,0 +1,64 @@
+{
+  "title": "Heading",
+  "@id": "stencila:Heading",
+  "extends": "Entity",
+  "role": "secondary",
+  "status": "stable",
+  "category": "prose",
+  "description": "Heading",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Heading"
+      ],
+      "default": "Heading",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "depth": {
+      "@id": "stencila:depth",
+      "description": "The depth of the heading.",
+      "type": "number",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 6,
+      "from": "Heading"
+    },
+    "content": {
+      "@id": "stencila:content",
+      "description": "Content of the heading.",
+      "type": "array",
+      "items": {
+        "$ref": "InlineContent.schema.json"
+      },
+      "from": "Heading"
+    }
+  },
+  "required": [
+    "type",
+    "content"
+  ],
+  "file": "Heading.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Heading.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Heading.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "propertyAliases": {}
+}

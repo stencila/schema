@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/VariableTypes.schema.json",
+  "title": "VariableTypes",
+  "description": "All type schemas that are derived from Variable",
+  "anyOf": [
+    {
+      "$ref": "Variable.schema.json"
+    },
+    {
+      "$ref": "Parameter.schema.json"
+    }
+  ]
+}

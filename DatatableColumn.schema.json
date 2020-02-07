@@ -1,0 +1,132 @@
+{
+  "title": "DatatableColumn",
+  "@id": "stencila:DatatableColumn",
+  "extends": "Thing",
+  "role": "secondary",
+  "status": "unstable",
+  "category": "data",
+  "description": "A column of data within a Datatable.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "DatatableColumn"
+      ],
+      "default": "DatatableColumn",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "alternateNames": {
+      "@id": "schema:alternateName",
+      "description": "Alternate names (aliases) for the item.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "from": "Thing",
+      "aliases": [
+        "alternateName"
+      ]
+    },
+    "description": {
+      "@id": "schema:description",
+      "description": "A description of the item.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "Node.schema.json"
+          }
+        }
+      ],
+      "from": "Thing"
+    },
+    "identifiers": {
+      "@id": "schema:identifier",
+      "description": "Any kind of identifier for any kind of Thing.",
+      "$comment": "Some identifiers have specific properties e.g the `issn` property for\nthe `Periodical` type. These should be used in preference to this\nproperty which is intended for identifiers that do not yet have a\nspecific property. Identifiers can be represented as strings, but\nusing a `PropertyValue` will usually be better because it allows\nfor `propertyID` (i.e. the type of identifier).\n",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "PropertyValue.schema.json"
+          }
+        ]
+      },
+      "from": "Thing",
+      "aliases": [
+        "identifier"
+      ]
+    },
+    "name": {
+      "@id": "schema:name",
+      "description": "The name of the item.",
+      "type": "string",
+      "from": "Thing",
+      "override": true
+    },
+    "url": {
+      "@id": "schema:url",
+      "description": "The URL of the item.",
+      "type": "string",
+      "format": "uri",
+      "from": "Thing"
+    },
+    "validator": {
+      "@id": "stencila:validator",
+      "description": "The validator to use to validate data in the column.",
+      "allOf": [
+        {
+          "$ref": "ArrayValidator.schema.json"
+        }
+      ],
+      "from": "DatatableColumn"
+    },
+    "values": {
+      "@id": "stencila:values",
+      "description": "The data values of the column.",
+      "type": "array",
+      "from": "DatatableColumn",
+      "aliases": [
+        "value"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "name",
+    "values"
+  ],
+  "file": "DatatableColumn.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/DatatableColumn.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/DatatableColumn.schema.yaml",
+  "type": "object",
+  "propertyAliases": {
+    "alternateName": "alternateNames",
+    "identifier": "identifiers",
+    "value": "values"
+  },
+  "additionalProperties": false
+}

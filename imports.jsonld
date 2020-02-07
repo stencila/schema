@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:imports",
+  "@type": "schema:Property",
+  "schema:name": "imports",
+  "schema:description": "Software packages that the code chunk imports",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeChunk"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Variable",
+  "@id": "stencila:Variable",
+  "extends": "Entity",
+  "role": "secondary",
+  "status": "unstable",
+  "category": "code",
+  "description": "A variable representing a name / value pair.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Variable",
+        "Parameter"
+      ],
+      "default": "Variable",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "name": {
+      "@id": "schema:name",
+      "description": "The name of the variable.",
+      "type": "string",
+      "pattern": "[a-z_][A-z0-9_]*",
+      "$comment": "This regex allows for snake_case and camelCase names but excludes\nPascalCase for names.\n",
+      "from": "Variable"
+    },
+    "readonly": {
+      "@id": "schema:readonlyValue",
+      "description": "Whether or not a property is mutable. Default is false.",
+      "$comment": "If `readonly` is `true` and `value` is defined then changes to `value`\nshould not be allowed.\n",
+      "type": "boolean",
+      "default": false,
+      "from": "Variable"
+    },
+    "validator": {
+      "@id": "stencila:validator",
+      "description": "The validator that the value is validated against.",
+      "anyOf": [
+        {
+          "$ref": "ValidatorTypes.schema.json"
+        }
+      ],
+      "from": "Variable"
+    },
+    "value": {
+      "@id": "schema:value",
+      "description": "The value of the variable.",
+      "allOf": [
+        {
+          "$ref": "Node.schema.json"
+        }
+      ],
+      "from": "Variable"
+    }
+  },
+  "required": [
+    "type",
+    "name"
+  ],
+  "file": "Variable.schema.yaml",
+  "children": [
+    "Parameter"
+  ],
+  "descendants": [
+    "Parameter"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Variable.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Variable.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "propertyAliases": {}
+}

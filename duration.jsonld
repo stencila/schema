@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:duration",
+  "@type": "schema:Property",
+  "schema:name": "duration",
+  "schema:description": "Duration in seconds of the last execution of the chunk.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeChunk"
+    }
+  ]
+}

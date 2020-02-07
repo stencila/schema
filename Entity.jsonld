@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Entity",
+  "@type": "schema:Class",
+  "schema:name": "Entity",
+  "schema:description": "The most simple compound (ie. non-atomic like `number`, `string` etc) type."
+}

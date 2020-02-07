@@ -1,0 +1,43 @@
+{
+  "title": "BlockContent",
+  "category": "prose",
+  "description": "Union type for valid block content.",
+  "anyOf": [
+    {
+      "$ref": "CodeBlock.schema.json"
+    },
+    {
+      "$ref": "CodeChunk.schema.json"
+    },
+    {
+      "$ref": "Heading.schema.json"
+    },
+    {
+      "$ref": "List.schema.json"
+    },
+    {
+      "$ref": "ListItem.schema.json"
+    },
+    {
+      "$ref": "MathBlock.schema.json"
+    },
+    {
+      "$ref": "Paragraph.schema.json"
+    },
+    {
+      "$ref": "QuoteBlock.schema.json"
+    },
+    {
+      "$ref": "Table.schema.json"
+    },
+    {
+      "$ref": "ThematicBreak.schema.json"
+    }
+  ],
+  "file": "BlockContent.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/BlockContent.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/BlockContent.schema.yaml"
+}

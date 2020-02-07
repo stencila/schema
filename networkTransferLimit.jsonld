@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:networkTransferLimit",
+  "@type": "schema:Property",
+  "schema:name": "networkTransferLimit",
+  "schema:description": "The amount of network data transfer (GiB) that the session is limited to.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

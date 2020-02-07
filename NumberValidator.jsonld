@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:NumberValidator",
+  "@type": "schema:Class",
+  "schema:name": "NumberValidator",
+  "schema:description": "A validator specifying the constraints on a numeric node."
+}

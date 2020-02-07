@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:columns",
+  "@type": "schema:Property",
+  "schema:name": "columns",
+  "schema:description": "The columns of data.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Datatable"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:returns",
+  "@type": "schema:Property",
+  "schema:name": "returns",
+  "schema:description": "The return type of the function.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Function"
+    }
+  ]
+}

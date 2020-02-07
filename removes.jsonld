@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:removes",
+  "@type": "schema:Property",
+  "schema:name": "removes",
+  "schema:description": "The packages that this environment removes from the base environments listed under `extends` (if any).,",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareEnvironment"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Code",
+  "@type": "schema:Class",
+  "schema:name": "Code",
+  "schema:description": "Base type for code nodes e.g. `CodeBlock`, `CodeExpression`."
+}

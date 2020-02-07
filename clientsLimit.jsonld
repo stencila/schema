@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:clientsLimit",
+  "@type": "schema:Property",
+  "schema:name": "clientsLimit",
+  "schema:description": "The maximum number of concurrent clients the session is limited to.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

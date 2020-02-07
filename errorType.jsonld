@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:errorType",
+  "@type": "schema:Property",
+  "schema:name": "errorType",
+  "schema:description": "The type of error e.g. \"SyntaxError\", \"ZeroDivisionError\".",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeError"
+    }
+  ]
+}

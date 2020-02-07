@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Superscript",
+  "@type": "schema:Class",
+  "schema:name": "Superscript",
+  "schema:description": "Superscripted content."
+}

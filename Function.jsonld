@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Function",
+  "@type": "schema:Class",
+  "schema:name": "Function",
+  "schema:description": "A function with a name, which might take Parameters and return a value of a certain type."
+}

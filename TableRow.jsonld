@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:TableRow",
+  "@type": "schema:Class",
+  "schema:name": "TableRow",
+  "schema:description": "A row within a Table."
+}

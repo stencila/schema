@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:CiteGroup",
+  "@type": "schema:Class",
+  "schema:name": "CiteGroup",
+  "schema:description": "A group of `Cite` nodes\n"
+}

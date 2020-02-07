@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:CodeExpression",
+  "@type": "schema:Class",
+  "schema:name": "CodeExpression",
+  "schema:description": "An expression defined in programming language source code."
+}

@@ -1,0 +1,110 @@
+{
+  "title": "Parameter",
+  "@id": "stencila:Parameter",
+  "extends": "Variable",
+  "role": "secondary",
+  "status": "unstable",
+  "category": "code",
+  "description": "A parameter that can be set and used in evaluated code.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Parameter"
+      ],
+      "default": "Parameter",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "name": {
+      "@id": "schema:name",
+      "description": "The name of the variable.",
+      "type": "string",
+      "pattern": "[a-z_][A-z0-9_]*",
+      "$comment": "This regex allows for snake_case and camelCase names but excludes\nPascalCase for names.\n",
+      "from": "Variable"
+    },
+    "readonly": {
+      "@id": "schema:readonlyValue",
+      "description": "Whether or not a property is mutable. Default is false.",
+      "$comment": "If `readonly` is `true` and `value` is defined then changes to `value`\nshould not be allowed.\n",
+      "type": "boolean",
+      "default": false,
+      "from": "Variable"
+    },
+    "validator": {
+      "@id": "stencila:validator",
+      "description": "The validator that the value is validated against.",
+      "anyOf": [
+        {
+          "$ref": "ValidatorTypes.schema.json"
+        }
+      ],
+      "from": "Variable"
+    },
+    "value": {
+      "@id": "schema:value",
+      "description": "The value of the variable.",
+      "allOf": [
+        {
+          "$ref": "Node.schema.json"
+        }
+      ],
+      "from": "Variable"
+    },
+    "default": {
+      "@id": "schema:defaultValue",
+      "description": "The default value of the parameter.",
+      "allOf": [
+        {
+          "$ref": "Node.schema.json"
+        }
+      ],
+      "from": "Parameter"
+    },
+    "required": {
+      "@id": "schema:valueRequired",
+      "description": "Is this parameter required, if not it should have a default or default is assumed to be null.",
+      "type": "boolean",
+      "from": "Parameter"
+    },
+    "repeats": {
+      "@id": "stencila:repeats",
+      "description": "Indicates that this parameter is variadic and can accept multiple arguments.",
+      "type": "boolean",
+      "from": "Parameter"
+    },
+    "extends": {
+      "@id": "stencila:extends",
+      "description": "Indicates that this parameter is variadic and can accept multiple named arguments.",
+      "type": "boolean",
+      "from": "Parameter"
+    }
+  },
+  "file": "Parameter.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Parameter.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Parameter.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "name"
+  ],
+  "propertyAliases": {}
+}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:target",
+  "@type": "schema:Property",
+  "schema:name": "target",
+  "schema:description": "The target of the citation (URL or reference ID).",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Cite"
+    },
+    {
+      "@id": "stencila:Link"
+    }
+  ]
+}

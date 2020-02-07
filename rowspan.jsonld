@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:rowspan",
+  "@type": "schema:Property",
+  "schema:name": "rowspan",
+  "schema:description": "How many columns the cell extends.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:TableCell"
+    }
+  ]
+}

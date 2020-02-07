@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:depth",
+  "@type": "schema:Property",
+  "schema:name": "depth",
+  "schema:description": "The depth of the heading.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:Heading"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "MathFragment",
+  "@id": "stencila:MathFragment",
+  "extends": "Math",
+  "role": "secondary",
+  "status": "unstable",
+  "category": "prose",
+  "description": "A fragment of math, e.g a variable name, to be treated as inline content.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "MathFragment"
+      ],
+      "default": "MathFragment",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "mathLanguage": {
+      "@id": "schema:mathLanguage",
+      "description": "The language used for the equation e.g tex, mathml, asciimath.",
+      "type": "string",
+      "default": "tex",
+      "from": "Math"
+    },
+    "text": {
+      "@id": "schema:text",
+      "description": "The text of the equation in the language.",
+      "type": "string",
+      "from": "Math"
+    }
+  },
+  "file": "MathFragment.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/MathFragment.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/MathFragment.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "text"
+  ],
+  "propertyAliases": {}
+}

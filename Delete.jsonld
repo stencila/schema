@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Delete",
+  "@type": "schema:Class",
+  "schema:name": "Delete",
+  "schema:description": "Content that is marked for deletion"
+}

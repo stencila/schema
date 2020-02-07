@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:memoryRequest",
+  "@type": "schema:Property",
+  "schema:name": "memoryRequest",
+  "schema:description": "The amount of memory requested for the session.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "title": "PublicationVolume",
+  "@id": "schema:PublicationVolume",
+  "extends": "CreativeWork",
+  "role": "secondary",
+  "status": "unstable",
+  "category": "metadata",
+  "description": "A part of a successively published publication such as a periodical or multi-volume work.\n",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "PublicationVolume"
+      ],
+      "default": "PublicationVolume",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "alternateNames": {
+      "@id": "schema:alternateName",
+      "description": "Alternate names (aliases) for the item.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "from": "Thing",
+      "aliases": [
+        "alternateName"
+      ]
+    },
+    "description": {
+      "@id": "schema:description",
+      "description": "A description of the item.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "Node.schema.json"
+          }
+        }
+      ],
+      "from": "Thing"
+    },
+    "identifiers": {
+      "@id": "schema:identifier",
+      "description": "Any kind of identifier for any kind of Thing.",
+      "$comment": "Some identifiers have specific properties e.g the `issn` property for\nthe `Periodical` type. These should be used in preference to this\nproperty which is intended for identifiers that do not yet have a\nspecific property. Identifiers can be represented as strings, but\nusing a `PropertyValue` will usually be better because it allows\nfor `propertyID` (i.e. the type of identifier).\n",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "PropertyValue.schema.json"
+          }
+        ]
+      },
+      "from": "Thing",
+      "aliases": [
+        "identifier"
+      ]
+    },
+    "name": {
+      "@id": "schema:name",
+      "description": "The name of the item.",
+      "type": "string",
+      "from": "Thing"
+    },
+    "url": {
+      "@id": "schema:url",
+      "description": "The URL of the item.",
+      "type": "string",
+      "format": "uri",
+      "from": "Thing"
+    },
+    "authors": {
+      "@id": "schema:author",
+      "description": "The authors of this creative work.",
+      "type": "array",
+      "allOf": [
+        {
+          "codec": "csi"
+        },
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "Person.schema.json"
+              },
+              {
+                "$ref": "Organization.schema.json"
+              }
+            ]
+          }
+        }
+      ],
+      "from": "CreativeWork",
+      "aliases": [
+        "author"
+      ]
+    },
+    "content": {
+      "@id": "stencila:content",
+      "description": "The structured content of this creative work c.f. property `text`.",
+      "type": "array",
+      "items": {
+        "$ref": "Node.schema.json"
+      },
+      "from": "CreativeWork"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "description": "Date/time of creation.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/dateProperty"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "dateReceived": {
+      "@id": "schema:dateReceived",
+      "description": "Date/time that work was received.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/dateProperty"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "dateAccepted": {
+      "@id": "stencila:dateAccepted",
+      "description": "Date/time of acceptance.",
+      "$comment": "This is not yet a schema.org property but the term is used\n[in Dublin Core](http://purl.org/dc/terms/dateAccepted).\n",
+      "allOf": [
+        {
+          "$ref": "#/definitions/dateProperty"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "description": "Date/time of most recent modification.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/dateProperty"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "datePublished": {
+      "@id": "schema:datePublished",
+      "aliases": [
+        "date"
+      ],
+      "description": "Date of first publication.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/dateProperty"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "editors": {
+      "@id": "schema:editor",
+      "description": "People who edited the `CreativeWork`.",
+      "type": "array",
+      "items": {
+        "$ref": "Person.schema.json"
+      },
+      "from": "CreativeWork",
+      "aliases": [
+        "editor"
+      ]
+    },
+    "funders": {
+      "@id": "schema:funder",
+      "description": "People or organizations that funded the `CreativeWork`.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "Person.schema.json"
+          },
+          {
+            "$ref": "Organization.schema.json"
+          }
+        ]
+      },
+      "from": "CreativeWork",
+      "aliases": [
+        "funder"
+      ]
+    },
+    "fundedBy": {
+      "@id": "stencila:fundedBy",
+      "description": "Grants that funded the `CreativeWork`; reverse of `fundedItems`.",
+      "$comment": "This follows the proposal [here](https://github.com/schemaorg/schemaorg/issues/2258)\nfor a property that is the reverse of `fundedItems`.\nIt is an any because a `CreativeWork` may have been funded through more than\none `Grant`.\n",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "Grant.schema.json"
+          },
+          {
+            "$ref": "MonetaryGrant.schema.json"
+          }
+        ]
+      },
+      "from": "CreativeWork"
+    },
+    "keywords": {
+      "@id": "schema:keywords",
+      "description": "Keywords or tags used to describe this content.\nMultiple entries in a keywords list are typically delimited by commas.\n",
+      "allOf": [
+        {
+          "codec": "csi"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "isPartOf": {
+      "@id": "schema:isPartOf",
+      "description": "An item or other CreativeWork that this CreativeWork is a part of.\n",
+      "allOf": [
+        {
+          "$ref": "CreativeWorkTypes.schema.json"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "licenses": {
+      "@id": "schema:license",
+      "description": "License documents that applies to this content, typically indicated by URL.\n",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "$ref": "CreativeWorkTypes.schema.json"
+          }
+        ]
+      },
+      "from": "CreativeWork",
+      "aliases": [
+        "license"
+      ]
+    },
+    "parts": {
+      "@id": "schema:hasParts",
+      "aliases": [
+        "hasParts",
+        "part"
+      ],
+      "description": "Elements of the collection which can be a variety of different elements,\nsuch as Articles, Datatables, Tables and more.\n",
+      "type": "array",
+      "items": {
+        "$ref": "CreativeWorkTypes.schema.json"
+      },
+      "from": "CreativeWork"
+    },
+    "publisher": {
+      "@id": "schema:publisher",
+      "description": "A publisher of the CreativeWork.\n",
+      "anyOf": [
+        {
+          "$ref": "Person.schema.json"
+        },
+        {
+          "$ref": "Organization.schema.json"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "references": {
+      "@id": "schema:citation",
+      "aliases": [
+        "citations",
+        "reference"
+      ],
+      "description": "References to other creative works, such as another publication,\nweb page, scholarly article, etc.\n",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "CreativeWorkTypes.schema.json"
+          }
+        ]
+      },
+      "from": "CreativeWork"
+    },
+    "text": {
+      "@id": "schema:text",
+      "description": "The textual content of this creative work.",
+      "type": "string",
+      "from": "CreativeWork"
+    },
+    "title": {
+      "@id": "schema:headline",
+      "description": "The title of the creative work.",
+      "aliases": [
+        "headline"
+      ],
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "Node.schema.json"
+          }
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "version": {
+      "@id": "schema:version",
+      "description": "The version of the creative work.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "from": "CreativeWork"
+    },
+    "pageStart": {
+      "@id": "schema:pageStart",
+      "description": "The page on which the work starts; for example \"135\" or \"xiii\".",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "from": "PublicationVolume"
+    },
+    "pageEnd": {
+      "@id": "schema:pageEnd",
+      "description": "The page on which the work ends; for example \"138\" or \"xvi\".",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "from": "PublicationVolume"
+    },
+    "pagination": {
+      "@id": "schema:pagination",
+      "description": "Any description of pages that is not separated into pageStart and pageEnd;\nfor example, \"1-6, 9, 55\".\n",
+      "type": "string",
+      "from": "PublicationVolume"
+    },
+    "volumeNumber": {
+      "@id": "schema:volumeNumber",
+      "description": "Identifies the volume of publication or multi-part work; for example, \"iii\" or \"2\".\n",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "from": "PublicationVolume"
+    }
+  },
+  "file": "PublicationVolume.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/PublicationVolume.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/PublicationVolume.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "dateProperty": {
+      "anyOf": [
+        {
+          "$ref": "Date.schema.json"
+        },
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "propertyAliases": {
+    "alternateName": "alternateNames",
+    "identifier": "identifiers",
+    "author": "authors",
+    "date": "datePublished",
+    "editor": "editors",
+    "funder": "funders",
+    "license": "licenses",
+    "hasParts": "parts",
+    "part": "parts",
+    "citations": "references",
+    "reference": "references",
+    "headline": "title"
+  }
+}

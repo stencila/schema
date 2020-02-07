@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:CodeBlock",
+  "@type": "schema:Class",
+  "schema:name": "CodeBlock",
+  "schema:description": "A code block."
+}

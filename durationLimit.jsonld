@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:durationLimit",
+  "@type": "schema:Property",
+  "schema:name": "durationLimit",
+  "schema:description": "The maximum duration (seconds) the session is limited to.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

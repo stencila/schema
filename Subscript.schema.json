@@ -1,0 +1,55 @@
+{
+  "title": "Subscript",
+  "@id": "stencila:Subscript",
+  "extends": "Mark",
+  "role": "secondary",
+  "status": "stable",
+  "category": "prose",
+  "description": "Subscripted content.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Subscript"
+      ],
+      "default": "Subscript",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "content": {
+      "@id": "stencila:content",
+      "description": "The content that is marked.",
+      "type": "array",
+      "items": {
+        "$ref": "InlineContent.schema.json"
+      },
+      "from": "Mark"
+    }
+  },
+  "file": "Subscript.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Subscript.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Subscript.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "content"
+  ],
+  "propertyAliases": {}
+}

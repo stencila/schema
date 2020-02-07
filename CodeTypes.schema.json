@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/CodeTypes.schema.json",
+  "title": "CodeTypes",
+  "description": "All type schemas that are derived from Code",
+  "anyOf": [
+    {
+      "$ref": "Code.schema.json"
+    },
+    {
+      "$ref": "CodeBlock.schema.json"
+    },
+    {
+      "$ref": "CodeChunk.schema.json"
+    },
+    {
+      "$ref": "CodeExpression.schema.json"
+    },
+    {
+      "$ref": "CodeFragment.schema.json"
+    }
+  ]
+}

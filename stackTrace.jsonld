@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:stackTrace",
+  "@type": "schema:Property",
+  "schema:name": "stackTrace",
+  "schema:description": "Stack trace leading up to the error.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeError"
+    }
+  ]
+}

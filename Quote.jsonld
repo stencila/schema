@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Quote",
+  "@type": "schema:Class",
+  "schema:name": "Quote",
+  "schema:description": "Inline, quoted content."
+}

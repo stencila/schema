@@ -1,0 +1,668 @@
+{
+  "@context": {
+    "type": "@type",
+    "id": "@id",
+    "schema": "http://schema.org/",
+    "bioschemas": "http://bioschemas.org",
+    "codemeta": "http://doi.org/10.5063/schema/codemeta-2.0",
+    "stencila": "http://schema.stenci.la/v0/jsonld/",
+    "@vocab": "http://schema.stenci.la/v0/jsonld/",
+    "ArrayValidator": {
+      "@id": "stencila:ArrayValidator"
+    },
+    "Article": {
+      "@id": "schema:Article"
+    },
+    "AudioObject": {
+      "@id": "schema:AudioObject"
+    },
+    "BooleanValidator": {
+      "@id": "stencila:BooleanValidator"
+    },
+    "Brand": {
+      "@id": "schema:Brand"
+    },
+    "Cite": {
+      "@id": "stencila:Cite"
+    },
+    "CiteGroup": {
+      "@id": "stencila:CiteGroup"
+    },
+    "Code": {
+      "@id": "stencila:Code"
+    },
+    "CodeBlock": {
+      "@id": "stencila:CodeBlock"
+    },
+    "CodeChunk": {
+      "@id": "stencila:CodeChunk"
+    },
+    "CodeError": {
+      "@id": "stencila:CodeError"
+    },
+    "CodeExpression": {
+      "@id": "stencila:CodeExpression"
+    },
+    "CodeFragment": {
+      "@id": "stencila:CodeFragment"
+    },
+    "Collection": {
+      "@id": "schema:Collection"
+    },
+    "ConstantValidator": {
+      "@id": "stencila:ConstantValidator"
+    },
+    "ContactPoint": {
+      "@id": "schema:ContactPoint"
+    },
+    "CreativeWork": {
+      "@id": "schema:CreativeWork"
+    },
+    "Datatable": {
+      "@id": "stencila:Datatable"
+    },
+    "DatatableColumn": {
+      "@id": "stencila:DatatableColumn"
+    },
+    "Date": {
+      "@id": "schema:Date"
+    },
+    "Delete": {
+      "@id": "stencila:Delete"
+    },
+    "Emphasis": {
+      "@id": "stencila:Emphasis"
+    },
+    "Entity": {
+      "@id": "stencila:Entity"
+    },
+    "EnumValidator": {
+      "@id": "stencila:EnumValidator"
+    },
+    "Figure": {
+      "@id": "stencila:Figure"
+    },
+    "Function": {
+      "@id": "stencila:Function"
+    },
+    "Grant": {
+      "@id": "schema:Grant"
+    },
+    "Heading": {
+      "@id": "stencila:Heading"
+    },
+    "ImageObject": {
+      "@id": "schema:ImageObject"
+    },
+    "Include": {
+      "@id": "stencila:Include"
+    },
+    "IntegerValidator": {
+      "@id": "stencila:IntegerValidator"
+    },
+    "Link": {
+      "@id": "stencila:Link"
+    },
+    "List": {
+      "@id": "schema:ItemList"
+    },
+    "ListItem": {
+      "@id": "schema:ListItem"
+    },
+    "Mark": {
+      "@id": "stencila:Mark"
+    },
+    "Math": {
+      "@id": "stencila:Math"
+    },
+    "MathBlock": {
+      "@id": "stencila:MathBlock"
+    },
+    "MathFragment": {
+      "@id": "stencila:MathFragment"
+    },
+    "MediaObject": {
+      "@id": "schema:MediaObject"
+    },
+    "MonetaryGrant": {
+      "@id": "schema:MonetaryGrant"
+    },
+    "NumberValidator": {
+      "@id": "stencila:NumberValidator"
+    },
+    "Organization": {
+      "@id": "schema:Organization"
+    },
+    "Paragraph": {
+      "@id": "stencila:Paragraph"
+    },
+    "Parameter": {
+      "@id": "stencila:Parameter"
+    },
+    "Periodical": {
+      "@id": "schema:Periodical"
+    },
+    "Person": {
+      "@id": "schema:Person"
+    },
+    "Product": {
+      "@id": "schema:Product"
+    },
+    "PropertyValue": {
+      "@id": "schema:PropertyValue"
+    },
+    "PublicationIssue": {
+      "@id": "schema:PublicationIssue"
+    },
+    "PublicationVolume": {
+      "@id": "schema:PublicationVolume"
+    },
+    "Quote": {
+      "@id": "stencila:Quote"
+    },
+    "QuoteBlock": {
+      "@id": "stencila:QuoteBlock"
+    },
+    "SoftwareApplication": {
+      "@id": "schema:SoftwareApplication"
+    },
+    "SoftwareEnvironment": {
+      "@id": "stencila:SoftwareEnvironment"
+    },
+    "SoftwareSession": {
+      "@id": "stencila:SoftwareSession"
+    },
+    "SoftwareSourceCode": {
+      "@id": "schema:SoftwareSourceCode"
+    },
+    "StringValidator": {
+      "@id": "stencila:StringValidator"
+    },
+    "Strong": {
+      "@id": "stencila:Strong"
+    },
+    "Subscript": {
+      "@id": "stencila:Subscript"
+    },
+    "Superscript": {
+      "@id": "stencila:Superscript"
+    },
+    "Table": {
+      "@id": "schema:Table"
+    },
+    "TableCell": {
+      "@id": "stencila:TableCell"
+    },
+    "TableRow": {
+      "@id": "stencila:TableRow"
+    },
+    "ThematicBreak": {
+      "@id": "stencila:ThematicBreak"
+    },
+    "Thing": {
+      "@id": "schema:Thing"
+    },
+    "TupleValidator": {
+      "@id": "stencila:TupleValidator"
+    },
+    "Variable": {
+      "@id": "stencila:Variable"
+    },
+    "VideoObject": {
+      "@id": "schema:VideoObject"
+    },
+    "VolumeMount": {
+      "@id": "stencila:VolumeMount"
+    },
+    "address": {
+      "@id": "schema:address"
+    },
+    "adds": {
+      "@id": "stencila:adds"
+    },
+    "affiliations": {
+      "@id": "schema:affiliation"
+    },
+    "alternateNames": {
+      "@id": "schema:alternateName"
+    },
+    "alters": {
+      "@id": "stencila:alters"
+    },
+    "amounts": {
+      "@id": "schema:amount"
+    },
+    "assigns": {
+      "@id": "stencila:assigns"
+    },
+    "authors": {
+      "@id": "schema:author"
+    },
+    "availableLanguages": {
+      "@id": "schema:availableLanguage"
+    },
+    "bitrate": {
+      "@id": "schema:bitrate"
+    },
+    "brands": {
+      "@id": "schema:brand"
+    },
+    "caption": {
+      "@id": "schema:caption"
+    },
+    "cellType": {
+      "@id": "stencila:cellType"
+    },
+    "cells": {
+      "@id": "stencila:cells"
+    },
+    "checked": {
+      "@id": "stencila:checked"
+    },
+    "citationMode": {
+      "@id": "stencila:citationMode"
+    },
+    "cite": {
+      "@id": "stencila:cite"
+    },
+    "clientsLimit": {
+      "@id": "stencila:clientsLimit"
+    },
+    "clientsRequest": {
+      "@id": "stencila:clientsRequest"
+    },
+    "codeRepository": {
+      "@id": "schema:codeRepository"
+    },
+    "codeSampleType": {
+      "@id": "schema:codeSampleType"
+    },
+    "colspan": {
+      "@id": "stencila:colspan"
+    },
+    "columns": {
+      "@id": "stencila:columns"
+    },
+    "contactPoints": {
+      "@id": "schema:contactPoint"
+    },
+    "contains": {
+      "@id": "stencila:contains"
+    },
+    "content": {
+      "@id": "stencila:content"
+    },
+    "contentSize": {
+      "@id": "schema:contentSize"
+    },
+    "contentUrl": {
+      "@id": "schema:contentUrl"
+    },
+    "cpuLimit": {
+      "@id": "stencila:cpuLimit"
+    },
+    "cpuRequest": {
+      "@id": "stencila:cpuRequest"
+    },
+    "dateAccepted": {
+      "@id": "stencila:dateAccepted"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated"
+    },
+    "dateEnd": {
+      "@id": "schema:endDate"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified"
+    },
+    "datePublished": {
+      "@id": "schema:datePublished"
+    },
+    "dateReceived": {
+      "@id": "schema:dateReceived"
+    },
+    "dateStart": {
+      "@id": "schema:startDate"
+    },
+    "declares": {
+      "@id": "stencila:declares"
+    },
+    "default": {
+      "@id": "schema:defaultValue"
+    },
+    "departments": {
+      "@id": "schema:department"
+    },
+    "depth": {
+      "@id": "stencila:depth"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "duration": {
+      "@id": "stencila:duration"
+    },
+    "durationLimit": {
+      "@id": "stencila:durationLimit"
+    },
+    "durationRequest": {
+      "@id": "stencila:durationRequest"
+    },
+    "editors": {
+      "@id": "schema:editor"
+    },
+    "emails": {
+      "@id": "schema:email"
+    },
+    "embedUrl": {
+      "@id": "schema:embedUrl"
+    },
+    "environment": {
+      "@id": "stencila:environment"
+    },
+    "errorMessage": {
+      "@id": "stencila:errorMessage"
+    },
+    "errorType": {
+      "@id": "stencila:errorType"
+    },
+    "errors": {
+      "@id": "stencila:errors"
+    },
+    "exclusiveMaximum": {
+      "@id": "stencila:exclusiveMaximum"
+    },
+    "exclusiveMinimum": {
+      "@id": "stencila:exclusiveMinimum"
+    },
+    "exportFrom": {
+      "@id": "stencila:exportFrom"
+    },
+    "extends": {
+      "@id": "stencila:extends"
+    },
+    "familyNames": {
+      "@id": "schema:familyName"
+    },
+    "format": {
+      "@id": "schema:encodingFormat"
+    },
+    "fundedBy": {
+      "@id": "stencila:fundedBy"
+    },
+    "fundedItems": {
+      "@id": "schema:fundedItem"
+    },
+    "funders": {
+      "@id": "schema:funder"
+    },
+    "givenNames": {
+      "@id": "schema:givenName"
+    },
+    "honorificPrefix": {
+      "@id": "schema:honorificPrefix"
+    },
+    "honorificSuffix": {
+      "@id": "schema:honorificSuffix"
+    },
+    "identifiers": {
+      "@id": "schema:identifier"
+    },
+    "importTo": {
+      "@id": "stencila:importTo"
+    },
+    "imports": {
+      "@id": "stencila:imports"
+    },
+    "isPartOf": {
+      "@id": "schema:isPartOf"
+    },
+    "issns": {
+      "@id": "schema:issn"
+    },
+    "issueNumber": {
+      "@id": "schema:issueNumber"
+    },
+    "items": {
+      "@id": "schema:itemListElement"
+    },
+    "jobTitle": {
+      "@id": "schema:jobTitle"
+    },
+    "keywords": {
+      "@id": "schema:keywords"
+    },
+    "label": {
+      "@id": "stencila:label"
+    },
+    "legalName": {
+      "@id": "schema:legalName"
+    },
+    "licenses": {
+      "@id": "schema:license"
+    },
+    "logo": {
+      "@id": "schema:logo"
+    },
+    "maintainers": {
+      "@id": "codemeta:maintainer"
+    },
+    "mathLanguage": {
+      "@id": "schema:mathLanguage"
+    },
+    "maxItems": {
+      "@id": "stencila:maxItems"
+    },
+    "maxLength": {
+      "@id": "stencila:maxLength"
+    },
+    "maximum": {
+      "@id": "stencila:maximum"
+    },
+    "memberOf": {
+      "@id": "schema:memberOf"
+    },
+    "memoryLimit": {
+      "@id": "stencila:memoryLimit"
+    },
+    "memoryRequest": {
+      "@id": "stencila:memoryRequest"
+    },
+    "meta": {
+      "@id": "stencila:meta"
+    },
+    "minItems": {
+      "@id": "stencila:minItems"
+    },
+    "minLength": {
+      "@id": "stencila:minLength"
+    },
+    "minimum": {
+      "@id": "stencila:minimum"
+    },
+    "mountDestination": {
+      "@id": "stencila:mountDestination"
+    },
+    "mountOptions": {
+      "@id": "stencila:mountOptions"
+    },
+    "mountSource": {
+      "@id": "stencila:mountSource"
+    },
+    "mountType": {
+      "@id": "stencila:mountType"
+    },
+    "multipleOf": {
+      "@id": "stencila:multipleOf"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "networkTransferLimit": {
+      "@id": "stencila:networkTransferLimit"
+    },
+    "networkTransferRequest": {
+      "@id": "stencila:networkTransferRequest"
+    },
+    "order": {
+      "@id": "schema:itemListOrder"
+    },
+    "output": {
+      "@id": "stencila:output"
+    },
+    "outputs": {
+      "@id": "stencila:outputs"
+    },
+    "pageEnd": {
+      "@id": "schema:pageEnd"
+    },
+    "pageStart": {
+      "@id": "schema:pageStart"
+    },
+    "pagination": {
+      "@id": "schema:pagination"
+    },
+    "parameters": {
+      "@id": "schema:parameters"
+    },
+    "parentOrganization": {
+      "@id": "schema:parentOrganization"
+    },
+    "parts": {
+      "@id": "schema:hasParts"
+    },
+    "pattern": {
+      "@id": "stencila:pattern"
+    },
+    "prefix": {
+      "@id": "stencila:citationPrefix"
+    },
+    "productID": {
+      "@id": "schema:productID"
+    },
+    "programmingLanguage": {
+      "@id": "schema:programmingLanguage"
+    },
+    "propertyID": {
+      "@id": "schema:propertyID"
+    },
+    "publisher": {
+      "@id": "schema:publisher"
+    },
+    "readonly": {
+      "@id": "schema:readonlyValue"
+    },
+    "reads": {
+      "@id": "stencila:reads"
+    },
+    "references": {
+      "@id": "schema:citation"
+    },
+    "relation": {
+      "@id": "schema:linkRelationship"
+    },
+    "removes": {
+      "@id": "stencila:removes"
+    },
+    "repeats": {
+      "@id": "stencila:repeats"
+    },
+    "required": {
+      "@id": "schema:valueRequired"
+    },
+    "returns": {
+      "@id": "stencila:returns"
+    },
+    "reviews": {
+      "@id": "schema:review"
+    },
+    "rowType": {
+      "@id": "stencila:rowType"
+    },
+    "rows": {
+      "@id": "stencila:rows"
+    },
+    "rowspan": {
+      "@id": "stencila:rowspan"
+    },
+    "runtimePlatform": {
+      "@id": "schema:runtimePlatform"
+    },
+    "softwareRequirements": {
+      "@id": "schema:softwareRequirements"
+    },
+    "softwareVersion": {
+      "@id": "schema:softwareVersion"
+    },
+    "source": {
+      "@id": "stencila:source"
+    },
+    "sponsors": {
+      "@id": "schema:sponsor"
+    },
+    "stackTrace": {
+      "@id": "stencila:stackTrace"
+    },
+    "status": {
+      "@id": "stencila:sessionStatus"
+    },
+    "suffix": {
+      "@id": "stencila:citationSuffix"
+    },
+    "target": {
+      "@id": "stencila:target"
+    },
+    "targetProducts": {
+      "@id": "schema:targetProduct"
+    },
+    "telephoneNumbers": {
+      "@id": "schema:telephone"
+    },
+    "text": {
+      "@id": "schema:text"
+    },
+    "thumbnail": {
+      "@id": "schema:thumbnail"
+    },
+    "timeoutLimit": {
+      "@id": "stencila:timeoutLimit"
+    },
+    "timeoutRequest": {
+      "@id": "stencila:timeoutRequest"
+    },
+    "title": {
+      "@id": "schema:headline"
+    },
+    "transcript": {
+      "@id": "schema:transcript"
+    },
+    "uniqueItems": {
+      "@id": "stencila:uniqueItems"
+    },
+    "url": {
+      "@id": "schema:url"
+    },
+    "uses": {
+      "@id": "stencila:uses"
+    },
+    "validator": {
+      "@id": "stencila:validator"
+    },
+    "value": {
+      "@id": "schema:value"
+    },
+    "values": {
+      "@id": "stencila:values"
+    },
+    "version": {
+      "@id": "schema:version"
+    },
+    "volumeMounts": {
+      "@id": "stencila:volumeMounts"
+    },
+    "volumeNumber": {
+      "@id": "schema:volumeNumber"
+    }
+  }
+}

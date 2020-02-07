@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:BooleanValidator",
+  "@type": "schema:Class",
+  "schema:name": "BooleanValidator",
+  "schema:description": "A schema specifying that a node must be a boolean value."
+}

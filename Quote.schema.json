@@ -1,0 +1,69 @@
+{
+  "title": "Quote",
+  "@id": "stencila:Quote",
+  "extends": "Mark",
+  "role": "secondary",
+  "status": "stable",
+  "category": "prose",
+  "description": "Inline, quoted content.",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Quote"
+      ],
+      "default": "Quote",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "content": {
+      "@id": "stencila:content",
+      "description": "The content that is marked.",
+      "type": "array",
+      "items": {
+        "$ref": "InlineContent.schema.json"
+      },
+      "from": "Mark"
+    },
+    "cite": {
+      "@id": "stencila:cite",
+      "description": "The source of the quote.",
+      "anyOf": [
+        {
+          "$ref": "Cite.schema.json"
+        },
+        {
+          "type": "string",
+          "format": "uri"
+        }
+      ],
+      "from": "Quote"
+    }
+  },
+  "file": "Quote.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Quote.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Quote.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "content"
+  ],
+  "propertyAliases": {}
+}

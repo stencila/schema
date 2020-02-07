@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:networkTransferRequest",
+  "@type": "schema:Property",
+  "schema:name": "networkTransferRequest",
+  "schema:description": "The amount of network data transfer (GiB) requested for the session.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:SoftwareSession"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Subscript",
+  "@type": "schema:Class",
+  "schema:name": "Subscript",
+  "schema:description": "Subscripted content."
+}

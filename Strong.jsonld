@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Strong",
+  "@type": "schema:Class",
+  "schema:name": "Strong",
+  "schema:description": "Strongly emphasised content."
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Delete",
+  "@id": "stencila:Delete",
+  "extends": "Mark",
+  "role": "secondary",
+  "status": "stable",
+  "category": "prose",
+  "description": "Content that is marked for deletion",
+  "properties": {
+    "type": {
+      "@id": "schema:type",
+      "description": "The name of the type.",
+      "type": "string",
+      "enum": [
+        "Delete"
+      ],
+      "default": "Delete",
+      "from": "Entity"
+    },
+    "id": {
+      "@id": "schema:id",
+      "description": "The identifier for this item.",
+      "type": "string",
+      "from": "Entity"
+    },
+    "meta": {
+      "@id": "stencila:meta",
+      "description": "Metadata associated with this item.",
+      "type": "object",
+      "from": "Entity"
+    },
+    "content": {
+      "@id": "stencila:content",
+      "description": "The content that is marked.",
+      "type": "array",
+      "items": {
+        "$ref": "InlineContent.schema.json"
+      },
+      "from": "Mark"
+    }
+  },
+  "file": "Delete.schema.yaml",
+  "children": [],
+  "descendants": [],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema.stenci.la/v0/Delete.schema.json",
+  "source": "https://github.com/stencila/schema/blob/master/Delete.schema.yaml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "content"
+  ],
+  "propertyAliases": {}
+}

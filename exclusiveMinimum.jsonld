@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:exclusiveMinimum",
+  "@type": "schema:Property",
+  "schema:name": "exclusiveMinimum",
+  "schema:description": "The exclusive lower limit for a numeric node.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:IntegerValidator"
+    },
+    {
+      "@id": "stencila:NumberValidator"
+    }
+  ]
+}

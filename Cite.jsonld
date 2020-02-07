@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:Cite",
+  "@type": "schema:Class",
+  "schema:name": "Cite",
+  "schema:description": "A reference to a CreativeWork that is cited in another CreativeWork.\n"
+}

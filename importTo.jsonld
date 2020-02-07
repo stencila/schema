@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:importTo",
+  "@type": "schema:Property",
+  "schema:name": "importTo",
+  "schema:description": "A compilation directive giving the name of the variable to import\nthe content of the code block as.\n",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:CodeBlock"
+    },
+    {
+      "@id": "stencila:CodeChunk"
+    },
+    {
+      "@id": "stencila:Link"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:dateAccepted",
+  "@type": "schema:Property",
+  "schema:name": "dateAccepted",
+  "schema:description": "Date/time of acceptance.",
+  "schema:domainIncludes": [
+    {
+      "@id": "schema:Article"
+    },
+    {
+      "@id": "schema:AudioObject"
+    },
+    {
+      "@id": "schema:Collection"
+    },
+    {
+      "@id": "schema:CreativeWork"
+    },
+    {
+      "@id": "stencila:Datatable"
+    },
+    {
+      "@id": "stencila:Figure"
+    },
+    {
+      "@id": "schema:ImageObject"
+    },
+    {
+      "@id": "schema:MediaObject"
+    },
+    {
+      "@id": "schema:Periodical"
+    },
+    {
+      "@id": "schema:PublicationIssue"
+    },
+    {
+      "@id": "schema:PublicationVolume"
+    },
+    {
+      "@id": "schema:SoftwareApplication"
+    },
+    {
+      "@id": "schema:SoftwareSourceCode"
+    },
+    {
+      "@id": "schema:Table"
+    },
+    {
+      "@id": "schema:VideoObject"
+    }
+  ]
+}

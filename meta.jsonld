@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "stencila": "http://schema.stenci.la/v0/jsonld/"
+  },
+  "@id": "stencila:meta",
+  "@type": "schema:Property",
+  "schema:name": "meta",
+  "schema:description": "Metadata associated with this item.",
+  "schema:domainIncludes": [
+    {
+      "@id": "stencila:ArrayValidator"
+    },
+    {
+      "@id": "schema:Article"
+    },
+    {
+      "@id": "schema:AudioObject"
+    },
+    {
+      "@id": "stencila:BooleanValidator"
+    },
+    {
+      "@id": "schema:Brand"
+    },
+    {
+      "@id": "stencila:Cite"
+    },
+    {
+      "@id": "stencila:CiteGroup"
+    },
+    {
+      "@id": "stencila:Code"
+    },
+    {
+      "@id": "stencila:CodeBlock"
+    },
+    {
+      "@id": "stencila:CodeChunk"
+    },
+    {
+      "@id": "stencila:CodeError"
+    },
+    {
+      "@id": "stencila:CodeExpression"
+    },
+    {
+      "@id": "stencila:CodeFragment"
+    },
+    {
+      "@id": "schema:Collection"
+    },
+    {
+      "@id": "stencila:ConstantValidator"
+    },
+    {
+      "@id": "schema:ContactPoint"
+    },
+    {
+      "@id": "schema:CreativeWork"
+    },
+    {
+      "@id": "stencila:Datatable"
+    },
+    {
+      "@id": "stencila:DatatableColumn"
+    },
+    {
+      "@id": "schema:Date"
+    },
+    {
+      "@id": "stencila:Delete"
+    },
+    {
+      "@id": "stencila:Emphasis"
+    },
+    {
+      "@id": "stencila:Entity"
+    },
+    {
+      "@id": "stencila:EnumValidator"
+    },
+    {
+      "@id": "stencila:Figure"
+    },
+    {
+      "@id": "stencila:Function"
+    },
+    {
+      "@id": "schema:Grant"
+    },
+    {
+      "@id": "stencila:Heading"
+    },
+    {
+      "@id": "schema:ImageObject"
+    },
+    {
+      "@id": "stencila:Include"
+    },
+    {
+      "@id": "stencila:IntegerValidator"
+    },
+    {
+      "@id": "stencila:Link"
+    },
+    {
+      "@id": "schema:ItemList"
+    },
+    {
+      "@id": "schema:ListItem"
+    },
+    {
+      "@id": "stencila:Mark"
+    },
+    {
+      "@id": "stencila:Math"
+    },
+    {
+      "@id": "stencila:MathBlock"
+    },
+    {
+      "@id": "stencila:MathFragment"
+    },
+    {
+      "@id": "schema:MediaObject"
+    },
+    {
+      "@id": "schema:MonetaryGrant"
+    },
+    {
+      "@id": "stencila:NumberValidator"
+    },
+    {
+      "@id": "schema:Organization"
+    },
+    {
+      "@id": "stencila:Paragraph"
+    },
+    {
+      "@id": "stencila:Parameter"
+    },
+    {
+      "@id": "schema:Periodical"
+    },
+    {
+      "@id": "schema:Person"
+    },
+    {
+      "@id": "schema:Product"
+    },
+    {
+      "@id": "schema:PropertyValue"
+    },
+    {
+      "@id": "schema:PublicationIssue"
+    },
+    {
+      "@id": "schema:PublicationVolume"
+    },
+    {
+      "@id": "stencila:Quote"
+    },
+    {
+      "@id": "stencila:QuoteBlock"
+    },
+    {
+      "@id": "schema:SoftwareApplication"
+    },
+    {
+      "@id": "stencila:SoftwareEnvironment"
+    },
+    {
+      "@id": "stencila:SoftwareSession"
+    },
+    {
+      "@id": "schema:SoftwareSourceCode"
+    },
+    {
+      "@id": "stencila:StringValidator"
+    },
+    {
+      "@id": "stencila:Strong"
+    },
+    {
+      "@id": "stencila:Subscript"
+    },
+    {
+      "@id": "stencila:Superscript"
+    },
+    {
+      "@id": "schema:Table"
+    },
+    {
+      "@id": "stencila:TableCell"
+    },
+    {
+      "@id": "stencila:TableRow"
+    },
+    {
+      "@id": "stencila:ThematicBreak"
+    },
+    {
+      "@id": "schema:Thing"
+    },
+    {
+      "@id": "stencila:TupleValidator"
+    },
+    {
+      "@id": "stencila:Variable"
+    },
+    {
+      "@id": "schema:VideoObject"
+    },
+    {
+      "@id": "stencila:VolumeMount"
+    }
+  ]
+}
