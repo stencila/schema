@@ -1,8 +1,0 @@
-title: Emphasis
-'@id': stencila:Emphasis
-extends: Mark
-role: secondary
-status: stable
-category: prose
-description: Emphasised content.
-properties: {}

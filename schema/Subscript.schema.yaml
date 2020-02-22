@@ -1,8 +1,0 @@
-title: Subscript
-'@id': stencila:Subscript
-extends: Mark
-role: secondary
-status: stable
-category: prose
-description: Subscripted content.
-properties: {}

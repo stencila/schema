@@ -1,7 +1,0 @@
-title: Article
-'@id': schema:Article
-extends: CreativeWork
-role: primary
-status: unstable
-category: metadata
-description: An article, including news and scholarly articles.
