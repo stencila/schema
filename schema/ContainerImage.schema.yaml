@@ -78,8 +78,8 @@ properties:
     '@id': stencila:layersMediaType
     description: The media type for the image layers (see https://github.com/opencontainers/image-spec/blob/master/media-types.md)
     type: string
-  recipe:
-    '@id': stencila:ContainerRecipe
+  containerRecipe:
+    '@id': stencila:containerRecipe
     description: |
       A container recipe file used to generate the container (e.g., Dockerfile or Singularity recipe)
     aliases:
