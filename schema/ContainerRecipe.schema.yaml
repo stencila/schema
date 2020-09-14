@@ -6,26 +6,10 @@ status: experimental
 category: code
 description: The set of build instructions, typically in a text file, to generate a linux container image
 properties:
-  applicationCategory:
-    '@id': stencila:applicationCategory
+  runtimePlatform:
+    '@id': stencila:runtimePlatform
     description: The container technology (e.g., Docker or Singularity)
     type: string
-  citation:
-    '@id': stencila:citation
-    description: One or more citations or references for the container recipe
-    type: array
-    items:
-      type: string
-  dateCreated:
-    '@id': schema:dateCreated
-    description: Date/time of creation.
-    allOf:
-      - $ref: '#/definitions/dateProperty'
-  dateModified:
-    '@id': schema:dateModified
-    description: Date/time of most recent modification.
-    allOf:
-      - $ref: '#/definitions/dateProperty'
   entrypoint:
     '@id': stencila:entrypoint
     description: The container entrypoint (a runscript or ENTRYPOINT directive)
@@ -33,10 +17,6 @@ properties:
   command:
     '@id': stencila:command
     description: The container default command (a CMD directive)
-    type: string
-  url:
-    '@id': stencila:url
-    description: A version control or download url for the container recipe (if available)
     type: string
 required:
   - name

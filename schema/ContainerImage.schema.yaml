@@ -1,6 +1,6 @@
 title: ContainerImage
 '@id': stencila:ContainerImage
-extends: Thing
+extends: SoftwareApplication
 role: primary
 status: experimental
 category: code
@@ -15,16 +15,10 @@ properties:
     type: array
     items:
       $ref: Mark
-  applicationCategory:
-    '@id': stencila:applicationCategory
+  runtimePlatform:
+    '@id': stencila:runtimePlatform
     description: The container technology (e.g., Docker or Singularity)
     type: string
-  citation:
-    '@id': stencila:citation
-    description: One or more citations or references for the container image
-    type: array
-    items:
-      type: string
   config:
     '@id': stencila:config
     description: The container configuration, typically dumped json in the case of a manifest or other text
@@ -34,20 +28,6 @@ properties:
   configMediaType:
     '@id': stencila:configMediaType
     description: The media type for an associated ContainerImage config
-    type: string
-  dateCreated:
-    '@id': schema:dateCreated
-    description: Date/time of creation.
-    allOf:
-      - $ref: '#/definitions/dateProperty'
-  dateModified:
-    '@id': schema:dateModified
-    description: Date/time of most recent modification.
-    allOf:
-      - $ref: '#/definitions/dateProperty'
-  downloadURL:
-    '@id': stencila:downloadURL
-    description: A download url for the container image (if available)
     type: string
   from:
     '@id': stencila:from
