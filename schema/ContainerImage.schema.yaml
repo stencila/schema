@@ -14,7 +14,12 @@ properties:
       - labels
     type: array
     items:
-      $ref: Mark
+      anyOf:
+        - type: string
+        - $ref: PropertyValue
+  applicationCategory:
+    '@id': stencila:applicationCategory
+     const: Linux containerization
   runtimePlatform:
     '@id': stencila:runtimePlatform
     description: The container technology (e.g., Docker or Singularity)
