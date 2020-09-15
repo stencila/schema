@@ -19,9 +19,10 @@ properties:
         - $ref: PropertyValue
   applicationCategory:
     '@id': stencila:applicationCategory
+    description: A container image is the binary that empowers Linux containerization
     enum: ['Linux containerization']
-  runtimePlatform:
-    '@id': stencila:runtimePlatform
+  containerRuntimePlatform:
+    '@id': stencila:containerRuntimePlatform
     description: The container technology (e.g., Docker or Singularity)
     type: string
   config:
@@ -79,9 +80,5 @@ properties:
     type: array
     items:
       $ref: SoftwareEnvironment
-  url:
-    '@id': stencila:url
-    description: A registry url for the container image
-    type: string
 required:
   - label
