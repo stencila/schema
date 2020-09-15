@@ -6,6 +6,30 @@
 [![Docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://schema.stenci.la/)
 [![Community](https://img.shields.io/badge/join-community-green.svg)](https://discord.gg/uFtQtk9)
 
+## 🗃️ Contents
+
+<!-- Automatically generated TOC. Don't edit, `make docs` instead>
+<!-- prettier-ignore-start -->
+
+<!-- toc -->
+
+- [👋 Introduction](#%F0%9F%91%8B-introduction)
+  * [Why an extension to schema.org?](#why-an-extension-to-schemaorg)
+  * [It's about names, not formats](#its-about-names-not-formats)
+  * [But, sometimes (often) we need more than just names](#but-sometimes-often-we-need-more-than-just-names)
+  * [Using JSON Schema for validation and type safety](#using-json-schema-for-validation-and-type-safety)
+  * [But, JSON Schema can be a pain to write](#but-json-schema-can-be-a-pain-to-write)
+- [📜 Documentation](#%F0%9F%93%9C-documentation)
+- [🚀 Usage](#%F0%9F%9A%80-usage)
+  * [JSON-LD context](#json-ld-context)
+  * [Programming language bindings](#programming-language-bindings)
+- [🛠 Contributing](#%F0%9F%9B%A0-contributing)
+- [🙏 Acknowledgments](#%F0%9F%99%8F-acknowledgments)
+
+<!-- tocstop -->
+
+<!-- prettier-ignore-end -->
+
 ## 👋 Introduction
 
 This is the Stencila Schema, an extension to [schema.org](https://schema.org) to support structured, semantic, and executable documents. It also provides implementations of schema.org types (and our extensions) for several languages including JSON Schema, Typescript, Python and R. It is a central part of our platform that is used widely throughout our open-source tools as the data model for executable documents.
@@ -51,9 +75,7 @@ as a Jupyter Notebook,
     {
       "cell_type": "markdown",
       "metadata": {},
-      "source": [
-        "Hello world!"
-      ]
+      "source": ["Hello world!"]
     }
   ]
 }
@@ -68,9 +90,7 @@ as JSON-LD,
   "content": [
     {
       "type": "Paragraph",
-      "content": [
-        "Hello world!"
-      ]
+      "content": ["Hello world!"]
     }
   ]
 }
@@ -91,10 +111,9 @@ This repository does not deal with format conversion per se. Please see [Encoda]
 - [Open Document Format](http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2-part1.html)
 - [Pandoc Types](https://github.com/jgm/pandoc-types)
 
-
 ### But, sometimes (often) we need more than just names
 
-Despite its name, schema.org does not define strong rules around the _shape_ of data, as say a database schema or XML schema does. All the properties of schema.org types are optional, and although they have "expected types", this is not enforced. In addition, properties can be singular values or array,  but always have a singular name. For example, a `Article` has a `author` property which could be undefined, a string, a `Person` or an `Organization`, or an array of `Person` or `Organization` items.
+Despite its name, schema.org does not define strong rules around the _shape_ of data, as say a database schema or XML schema does. All the properties of schema.org types are optional, and although they have "expected types", this is not enforced. In addition, properties can be singular values or array, but always have a singular name. For example, a `Article` has a `author` property which could be undefined, a string, a `Person` or an `Organization`, or an array of `Person` or `Organization` items.
 
 This flexibility makes a lot of sense for the primary purpose of schema.org: semantic annotation of other content. However, for use as an internal data model, as in Stencila, it can result in a lot of defensive code to check exactly which of these alternatives a property value is. And writing more code than you need to is A Bad Thing™.
 
@@ -147,7 +166,6 @@ With a JSON Schema, we are able to:
 
 JSON can be quite fiddly to write by hand. And JSON Schema lacks a way to easily express parent-child relationships between types. For these reasons, we define types using YAML with custom keywords such as `extends` and generate JSON Schema and ultimately bindings for each language from those.
 
-
 ## 📜 Documentation
 
 Documentation is available at https://schema.stenci.la/.
@@ -162,7 +180,6 @@ A JSON-LD `@context` is generated from the JSON Schema sources and published at 
 
 Individual files are published for each extension type e.g. https://schema.stenci.la/CodeChunk.jsonld and extension property e.g. https://schema.stenci.la/rowspan.jsonld
 
-
 ### Programming language bindings
 
 Binding for this schema, in the form of installable packages, are currently generated for:
@@ -172,6 +189,53 @@ Binding for this schema, in the form of installable packages, are currently gene
 - [Typescript](https://stencila.github.io/schema/ts/docs)
 
 Depending on the capabilities of the host language, these packages expose type definitions as well as utility functions for constructing valid Stencila Schema nodes. Each packages has its own documentation auto-generated from the code.
+
+## 🛠 Contributing
+
+We 💕 contributions! All contributions: ideas 🤔, examples 💡, bug reports 🐛, documentation 📖, code 💻, questions 💬.
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for a guide on how to contribute to the schema definitions. See the `README.md` files of each language sub-folder e.g. [`py`](py) for advice on development of language bindings.
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://has100ideas.com"><img src="https://avatars0.githubusercontent.com/u/57006?v=4" width="100px;" alt=""/><br /><sub><b>Mac Cowell</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=100ideas" title="Code">💻</a> <a href="#ideas-100ideas" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://toki.io"><img src="https://avatars1.githubusercontent.com/u/10161095?v=4" width="100px;" alt=""/><br /><sub><b>Jacqueline</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=jwijay" title="Code">💻</a> <a href="https://github.com/stencila/schema/commits?author=jwijay" title="Documentation">📖</a> <a href="#ideas-jwijay" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/beneboy"><img src="https://avatars1.githubusercontent.com/u/292725?v=4" width="100px;" alt=""/><br /><sub><b>Ben Shaw</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=beneboy" title="Code">💻</a> <a href="#ideas-beneboy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-beneboy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/stencila/schema/commits?author=beneboy" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://ketch.me"><img src="https://avatars2.githubusercontent.com/u/1646307?v=4" width="100px;" alt=""/><br /><sub><b>Alex Ketch</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=alex-ketch" title="Code">💻</a> <a href="https://github.com/stencila/schema/commits?author=alex-ketch" title="Documentation">📖</a> <a href="#design-alex-ketch" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/nokome"><img src="https://avatars0.githubusercontent.com/u/1152336?v=4" width="100px;" alt=""/><br /><sub><b>Nokome Bentley</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=nokome" title="Code">💻</a> <a href="https://github.com/stencila/schema/commits?author=nokome" title="Documentation">📖</a> <a href="#ideas-nokome" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/asisiuc"><img src="https://avatars0.githubusercontent.com/u/17000527?v=4" width="100px;" alt=""/><br /><sub><b>asisiuc</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=asisiuc" title="Code">💻</a> <a href="#ideas-asisiuc" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/apawlik"><img src="https://avatars2.githubusercontent.com/u/2358535?v=4" width="100px;" alt=""/><br /><sub><b>Aleksandra Pawlik</b></sub></a><br /><a href="https://github.com/stencila/schema/commits?author=apawlik" title="Code">💻</a> <a href="https://github.com/stencila/schema/commits?author=apawlik" title="Documentation">📖</a> <a href="#ideas-apawlik" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://vsoch.github.io"><img src="https://avatars0.githubusercontent.com/u/814322?v=4" width="100px;" alt=""/><br /><sub><b>Vanessasaurus</b></sub></a><br /><a href="#ideas-vsoch" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/stencila/schema/commits?author=vsoch" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<details>
+<summary><b id="format-approach">Add a contributor</b>...</summary>
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. To add youself, or someone else, to the above list, either,
+
+1. Ask the [@all-contributors bot](https://allcontributors.org/docs/en/bot/overview) to do it for you by commenting on an issue or PR like this:
+
+   > @all-contributors please add @octocat for bugs, tests and code
+
+2. Use the [`all-contributors` CLI](https://allcontributors.org/docs/en/cli/overview) to do it yourself:
+
+   ```bash
+   npx all-contributors add octocat bugs, tests, code
+   ```
+
+See the list of [contribution types](https://allcontributors.org/docs/en/emoji-key).
+
+</details>
 
 ## 🙏 Acknowledgments
 

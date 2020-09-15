@@ -14,8 +14,8 @@
   "scripts": {
     "format": "npx prettier --write './**/*.{js,json,md,ts,yaml}'",
     "lint": "npx eslint 'ts/**/*.{js,ts}' --fix",
-    "test": "npm run build:jsonschema && jest",
-    "test:cover": "npm run build:jsonschema && jest --coverage",
+    "test": "npm run build:jsonschema && npm run build:ts:types && npm run build:jsonld && jest",
+    "test:cover": "npm test -- --coverage",
     "build": "npm run build:jsonschema && npm run build:ts:types && npm run build:jsonld && npm run build:py && npm run build:r && npm run build:dist",
     "build:jsonschema": "ts-node ts/schema.ts",
     "build:jsonld": "ts-node ts/bindings/jsonld.ts",
@@ -26,12 +26,13 @@
     "build:ts:node": "microbundle --tsconfig tsconfig.lib.json --target node --format es,cjs ts/index.ts",
     "build:ts": "npm run build:ts:node && npm run build:ts:browser",
     "build:dist": "npm run build:ts && cp public/*.schema.json dist && cp public/*.jsonld dist",
-    "docs": "npm run docs:readme && npm run docs:build && npm run docs:api",
+    "docs": "npm run docs:readme && npm run docs:contrib && npm run docs:build && npm run docs:api",
     "docs:readme": "markdown-toc -i --maxdepth=4 README.md",
+    "docs:contrib": "markdown-toc -i --maxdepth=4 CONTRIBUTING.md",
     "docs:build": "ts-node ts/docs.ts",
     "docs:api": "ts-node ts/bindings/typescript.ts && typedoc --out ts/docs/ --mode file --exclude '**/*.test.ts' --exclude '**/__tests__/**' --exclude '**/__file_snapshots__/**'",
     "docs:serve": "npx browser-sync ./public -f ./public --directory --no-ui --reload-debounce 750",
-    "clean": "rimraf coverage dist public ts/types.ts"
+    "clean": "rimraf coverage dist public ts/types.ts ts/docs py/docs r/docs"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,7 @@
   "homepage": "https://stencila.github.io/schema",
   "devDependencies": {
     "@stencila/dev-config": "1.4.71",
-    "@stencila/encoda": "0.99.5",
+    "@stencila/encoda": "0.99.6",
     "@stencila/logga": "3.0.0",
     "@stoplight/json-ref-resolver": "3.1.0",
     "@types/fs-extra": "9.0.1",
@@ -53,10 +54,10 @@
     "@types/js-yaml": "3.12.5",
     "@types/lodash.clonedeep": "4.5.6",
     "@types/lodash.flatten": "4.4.6",
-    "@types/node": "14.10.0",
+    "@types/node": "14.10.1",
     "@types/prettier": "2.1.0",
     "@types/toposort": "2.0.3",
-    "ajv": "6.12.4",
+    "ajv": "6.12.5",
     "better-ajv-errors": "0.6.7",
     "browser-sync": "2.26.12",
     "del": "5.1.0",
