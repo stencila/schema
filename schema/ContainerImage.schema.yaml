@@ -19,7 +19,9 @@ properties:
         - $ref: PropertyValue
   applicationCategory:
     '@id': stencila:applicationCategory
-     const: Linux containerization
+     items: 
+       anyOf: 
+        - const: "Linux containerization"
   runtimePlatform:
     '@id': stencila:runtimePlatform
     description: The container technology (e.g., Docker or Singularity)
