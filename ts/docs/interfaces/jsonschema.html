@@ -1,0 +1,1224 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JsonSchema | @stencila/schema</title>
+	<meta name="description" content="Documentation for @stencila/schema">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@stencila/schema</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="jsonschema.html">JsonSchema</a>
+				</li>
+			</ul>
+			<h1>Interface JsonSchema</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface for Stencila <code>JsonSchema</code> instances.</p>
+					</div>
+					<p>The <code>JsonSchema</code> interface extends JSON Schema
+					with additional properties for:</p>
+					<ul>
+						<li>defining inheritance,</li>
+						<li>defining property aliases</li>
+						<li>specifying codecs used in coercion</li>
+						<li>categorizing node types</li>
+					</ul>
+					<p>For more details see the guidelines for authoring schemas.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="tsd-signature-type">JSONSchema7</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">JsonSchema</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#_comment" class="tsd-kind-icon">$comment</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#_id" class="tsd-kind-icon">$id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#_ref" class="tsd-kind-icon">$ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#_schema" class="tsd-kind-icon">$schema</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#_id-1" class="tsd-kind-icon">@id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#additionalitems" class="tsd-kind-icon">additional<wbr>Items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#additionalproperties" class="tsd-kind-icon">additional<wbr>Properties</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#aliases" class="tsd-kind-icon">aliases</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="jsonschema.html#allof" class="tsd-kind-icon">all<wbr>Of</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="jsonschema.html#anyof" class="tsd-kind-icon">any<wbr>Of</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#category" class="tsd-kind-icon">category</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#children" class="tsd-kind-icon">children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#codec" class="tsd-kind-icon">codec</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#const" class="tsd-kind-icon">const</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#contains" class="tsd-kind-icon">contains</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#contentencoding" class="tsd-kind-icon">content<wbr>Encoding</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#contentmediatype" class="tsd-kind-icon">content<wbr>Media<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#definitions" class="tsd-kind-icon">definitions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#dependencies" class="tsd-kind-icon">dependencies</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#descendants" class="tsd-kind-icon">descendants</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#else" class="tsd-kind-icon">else</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="jsonschema.html#enum" class="tsd-kind-icon">enum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#examples" class="tsd-kind-icon">examples</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#exclusivemaximum" class="tsd-kind-icon">exclusive<wbr>Maximum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#exclusiveminimum" class="tsd-kind-icon">exclusive<wbr>Minimum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#extends" class="tsd-kind-icon">extends</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#file" class="tsd-kind-icon">file</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#format" class="tsd-kind-icon">format</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#from" class="tsd-kind-icon">from</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#if" class="tsd-kind-icon">if</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#isarray" class="tsd-kind-icon">is<wbr>Array</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#isoverride" class="tsd-kind-icon">is<wbr>Override</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#isplural" class="tsd-kind-icon">is<wbr>Plural</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="jsonschema.html#items" class="tsd-kind-icon">items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#maxitems" class="tsd-kind-icon">max<wbr>Items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#maxlength" class="tsd-kind-icon">max<wbr>Length</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#maxproperties" class="tsd-kind-icon">max<wbr>Properties</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#maximum" class="tsd-kind-icon">maximum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#minitems" class="tsd-kind-icon">min<wbr>Items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#minlength" class="tsd-kind-icon">min<wbr>Length</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#minproperties" class="tsd-kind-icon">min<wbr>Properties</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#minimum" class="tsd-kind-icon">minimum</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#multipleof" class="tsd-kind-icon">multiple<wbr>Of</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#not" class="tsd-kind-icon">not</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#oneof" class="tsd-kind-icon">one<wbr>Of</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#pattern" class="tsd-kind-icon">pattern</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#patternproperties" class="tsd-kind-icon">pattern<wbr>Properties</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="jsonschema.html#properties" class="tsd-kind-icon">properties</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#propertyaliases" class="tsd-kind-icon">property<wbr>Aliases</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#propertynames" class="tsd-kind-icon">property<wbr>Names</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#readonly" class="tsd-kind-icon">read<wbr>Only</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#required" class="tsd-kind-icon">required</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#role" class="tsd-kind-icon">role</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#source" class="tsd-kind-icon">source</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="jsonschema.html#status" class="tsd-kind-icon">status</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#then" class="tsd-kind-icon">then</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#uniqueitems" class="tsd-kind-icon">unique<wbr>Items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="jsonschema.html#writeonly" class="tsd-kind-icon">write<wbr>Only</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="_comment" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> $comment</h3>
+					<div class="tsd-signature tsd-kind-icon">$comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#_comment">$comment</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:622</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="_id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> $id</h3>
+					<div class="tsd-signature tsd-kind-icon">$id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#_id">$id</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:619</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="_ref" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> $ref</h3>
+					<div class="tsd-signature tsd-kind-icon">$ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#_ref">$ref</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:620</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="_schema" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> $schema</h3>
+					<div class="tsd-signature tsd-kind-icon">$schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Version</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#_schema">$schema</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:621</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="_id-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> @id</h3>
+					<div class="tsd-signature tsd-kind-icon">@id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L26">ts/jsonSchema.ts:26</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The id for the type or property schema to be used
+							when generating JSON-LD.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="additionalitems" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> additional<wbr>Items</h3>
+					<div class="tsd-signature tsd-kind-icon">additional<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#additionalitems">additionalItems</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:651</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="additionalproperties" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> additional<wbr>Properties</h3>
+					<div class="tsd-signature tsd-kind-icon">additional<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#additionalproperties">additionalProperties</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:669</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="aliases" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> aliases</h3>
+					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L88">ts/jsonSchema.ts:88</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Aliases for this property schema.
+							Only applies when used in a property of another schema.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="allof" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> all<wbr>Of</h3>
+					<div class="tsd-signature tsd-kind-icon">all<wbr>Of<span class="tsd-signature-symbol">:</span> <a href="jsonschema.html" class="tsd-signature-type">JsonSchema</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides JSONSchema7.allOf</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L121">ts/jsonSchema.ts:121</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="anyof" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> any<wbr>Of</h3>
+					<div class="tsd-signature tsd-kind-icon">any<wbr>Of<span class="tsd-signature-symbol">:</span> <a href="jsonschema.html" class="tsd-signature-type">JsonSchema</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides JSONSchema7.anyOf</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L122">ts/jsonSchema.ts:122</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="category" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> category</h3>
+					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L41">ts/jsonSchema.ts:41</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The category of node that this schema belongs to.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="children" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> children</h3>
+					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L52">ts/jsonSchema.ts:52</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The names of the child (direct descendants) schemas of this schema.
+							Added during schema processing.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="codec" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> codec</h3>
+					<div class="tsd-signature tsd-kind-icon">codec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L101">ts/jsonSchema.ts:101</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of a Encoda codec that can be used to decode
+							values for this schema.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="const" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> const</h3>
+					<div class="tsd-signature tsd-kind-icon">const<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Type</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#const">const</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:629</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="contains" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> contains</h3>
+					<div class="tsd-signature tsd-kind-icon">contains<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#contains">contains</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:655</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="contentencoding" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> content<wbr>Encoding</h3>
+					<div class="tsd-signature tsd-kind-icon">content<wbr>Encoding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#contentencoding">contentEncoding</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:699</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="contentmediatype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> content<wbr>Media<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">content<wbr>Media<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#contentmediatype">contentMediaType</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:698</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-8">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-8</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="default" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default</h3>
+					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Type</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#default">default</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:713</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="definitions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> definitions</h3>
+					<div class="tsd-signature tsd-kind-icon">definitions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#definitions">definitions</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:704</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-9">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-9</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="dependencies" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dependencies</h3>
+					<div class="tsd-signature tsd-kind-icon">dependencies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#dependencies">dependencies</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:670</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="descendants" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> descendants</h3>
+					<div class="tsd-signature tsd-kind-icon">descendants<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L58">ts/jsonSchema.ts:58</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The descendant schemas of this schema.
+							Added during schema processing.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="description" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> description</h3>
+					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#description">description</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:712</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="else" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> else</h3>
+					<div class="tsd-signature tsd-kind-icon">else<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#else">else</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:680</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="enum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enum</h3>
+					<div class="tsd-signature tsd-kind-icon">enum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides JSONSchema7.enum</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L124">ts/jsonSchema.ts:124</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="examples" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> examples</h3>
+					<div class="tsd-signature tsd-kind-icon">examples<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Type</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#examples">examples</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:716</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="exclusivemaximum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> exclusive<wbr>Maximum</h3>
+					<div class="tsd-signature tsd-kind-icon">exclusive<wbr>Maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#exclusivemaximum">exclusiveMaximum</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:636</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="exclusiveminimum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> exclusive<wbr>Minimum</h3>
+					<div class="tsd-signature tsd-kind-icon">exclusive<wbr>Minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#exclusiveminimum">exclusiveMinimum</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:638</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extends" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> extends</h3>
+					<div class="tsd-signature tsd-kind-icon">extends<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L46">ts/jsonSchema.ts:46</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The schema that this schema extends.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="file" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> file</h3>
+					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L107">ts/jsonSchema.ts:107</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The file in which this schema is defined.
+							Added during schema processing.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="format" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> format</h3>
+					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#format">format</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:693</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="from" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> from</h3>
+					<div class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L65">ts/jsonSchema.ts:65</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The schema from which this property schema was inherited.
+								Only applies when used in a property of another schema.
+							Added during schema processing.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="if" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> if</h3>
+					<div class="tsd-signature tsd-kind-icon">if<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#if">if</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:678</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.6">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.6</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isarray" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Array</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Array<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L77">ts/jsonSchema.ts:77</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Is the property an array?</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isoverride" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Override</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Override<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L72">ts/jsonSchema.ts:72</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Is this property schema an override of a property inherited
+								from an ancestor. Examples of overrides include making an
+							optional property required, or changing the schema of the property.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isplural" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Plural</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Plural<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L82">ts/jsonSchema.ts:82</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Is the property an array and have a pluralized name e.g. authors</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="items" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> items</h3>
+					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="jsonschema.html" class="tsd-signature-type">JsonSchema</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides JSONSchema7.items</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L123">ts/jsonSchema.ts:123</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="maxitems" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Items</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#maxitems">maxItems</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:652</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="maxlength" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Length</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#maxlength">maxLength</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:643</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.3">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.3</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="maxproperties" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Properties</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#maxproperties">maxProperties</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:660</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.5">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.5</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="maximum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> maximum</h3>
+					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#maximum">maximum</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:635</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="minitems" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> min<wbr>Items</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#minitems">minItems</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:653</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="minlength" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> min<wbr>Length</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#minlength">minLength</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:644</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="minproperties" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> min<wbr>Properties</h3>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#minproperties">minProperties</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:661</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="minimum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> minimum</h3>
+					<div class="tsd-signature tsd-kind-icon">minimum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#minimum">minimum</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:637</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="multipleof" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> multiple<wbr>Of</h3>
+					<div class="tsd-signature tsd-kind-icon">multiple<wbr>Of<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#multipleof">multipleOf</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:634</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.2">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.2</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="not" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> not</h3>
+					<div class="tsd-signature tsd-kind-icon">not<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#not">not</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:688</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="oneof" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> one<wbr>Of</h3>
+					<div class="tsd-signature tsd-kind-icon">one<wbr>Of<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#oneof">oneOf</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:687</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="pattern" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#pattern">pattern</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:645</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="patternproperties" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pattern<wbr>Properties</h3>
+					<div class="tsd-signature tsd-kind-icon">pattern<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#patternproperties">patternProperties</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:666</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+					<a name="properties" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> properties</h3>
+					<div class="tsd-signature tsd-kind-icon">properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides JSONSchema7.properties</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L120">ts/jsonSchema.ts:120</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="propertyaliases" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> property<wbr>Aliases</h3>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L95">ts/jsonSchema.ts:95</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A map of property aliases.
+								Added during schema processing based on the <code>aliases</code>
+							of properties.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="propertynames" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> property<wbr>Names</h3>
+					<div class="tsd-signature tsd-kind-icon">property<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#propertynames">propertyNames</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:673</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="readonly" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> read<wbr>Only</h3>
+					<div class="tsd-signature tsd-kind-icon">read<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#readonly">readOnly</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:714</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="required" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> required</h3>
+					<div class="tsd-signature tsd-kind-icon">required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#required">required</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:662</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="role" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> role</h3>
+					<div class="tsd-signature tsd-kind-icon">role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"base"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"primary"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"secondary"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"tertiary"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L31">ts/jsonSchema.ts:31</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The role that this schema has.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="source" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> source</h3>
+					<div class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L113">ts/jsonSchema.ts:113</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The source file for this schema. A URL that can be used to
+							provide a link to view or edit the source.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="status" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> status</h3>
+					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"experimental"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"unstable"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stable"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/787c65c/ts/jsonSchema.ts#L36">ts/jsonSchema.ts:36</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current status of this schema.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="then" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> then</h3>
+					<div class="tsd-signature tsd-kind-icon">then<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7Definition</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#then">then</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:679</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="title" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> title</h3>
+					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#title">title</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:711</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-10">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-10</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">JSONSchema7TypeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">JSONSchema7TypeName</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#type">type</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:627</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>see</dt>
+							<dd><p><a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1">https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-6.1</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="uniqueitems" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> unique<wbr>Items</h3>
+					<div class="tsd-signature tsd-kind-icon">unique<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#uniqueitems">uniqueItems</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:654</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="writeonly" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> write<wbr>Only</h3>
+					<div class="tsd-signature tsd-kind-icon">write<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="jsonschema.html">JsonSchema</a>.<a href="jsonschema.html#writeonly">writeOnly</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/json-schema/index.d.ts:715</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="jsonschema.html" class="tsd-kind-icon">Json<wbr>Schema</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#_comment" class="tsd-kind-icon">$comment</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#_id" class="tsd-kind-icon">$id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#_ref" class="tsd-kind-icon">$ref</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#_schema" class="tsd-kind-icon">$schema</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#_id-1" class="tsd-kind-icon">@id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#additionalitems" class="tsd-kind-icon">additional<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#additionalproperties" class="tsd-kind-icon">additional<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#aliases" class="tsd-kind-icon">aliases</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="jsonschema.html#allof" class="tsd-kind-icon">all<wbr>Of</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="jsonschema.html#anyof" class="tsd-kind-icon">any<wbr>Of</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#category" class="tsd-kind-icon">category</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#children" class="tsd-kind-icon">children</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#codec" class="tsd-kind-icon">codec</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#const" class="tsd-kind-icon">const</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#contains" class="tsd-kind-icon">contains</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#contentencoding" class="tsd-kind-icon">content<wbr>Encoding</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#contentmediatype" class="tsd-kind-icon">content<wbr>Media<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#default" class="tsd-kind-icon">default</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#definitions" class="tsd-kind-icon">definitions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#dependencies" class="tsd-kind-icon">dependencies</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#descendants" class="tsd-kind-icon">descendants</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#description" class="tsd-kind-icon">description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#else" class="tsd-kind-icon">else</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="jsonschema.html#enum" class="tsd-kind-icon">enum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#examples" class="tsd-kind-icon">examples</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#exclusivemaximum" class="tsd-kind-icon">exclusive<wbr>Maximum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#exclusiveminimum" class="tsd-kind-icon">exclusive<wbr>Minimum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#extends" class="tsd-kind-icon">extends</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#file" class="tsd-kind-icon">file</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#format" class="tsd-kind-icon">format</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#from" class="tsd-kind-icon">from</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#if" class="tsd-kind-icon">if</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#isarray" class="tsd-kind-icon">is<wbr>Array</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#isoverride" class="tsd-kind-icon">is<wbr>Override</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#isplural" class="tsd-kind-icon">is<wbr>Plural</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="jsonschema.html#items" class="tsd-kind-icon">items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#maxitems" class="tsd-kind-icon">max<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#maxlength" class="tsd-kind-icon">max<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#maxproperties" class="tsd-kind-icon">max<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#maximum" class="tsd-kind-icon">maximum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#minitems" class="tsd-kind-icon">min<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#minlength" class="tsd-kind-icon">min<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#minproperties" class="tsd-kind-icon">min<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#minimum" class="tsd-kind-icon">minimum</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#multipleof" class="tsd-kind-icon">multiple<wbr>Of</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#not" class="tsd-kind-icon">not</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#oneof" class="tsd-kind-icon">one<wbr>Of</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#pattern" class="tsd-kind-icon">pattern</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#patternproperties" class="tsd-kind-icon">pattern<wbr>Properties</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
+								<a href="jsonschema.html#properties" class="tsd-kind-icon">properties</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#propertyaliases" class="tsd-kind-icon">property<wbr>Aliases</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#propertynames" class="tsd-kind-icon">property<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#readonly" class="tsd-kind-icon">read<wbr>Only</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#required" class="tsd-kind-icon">required</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#role" class="tsd-kind-icon">role</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#source" class="tsd-kind-icon">source</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="jsonschema.html#status" class="tsd-kind-icon">status</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#then" class="tsd-kind-icon">then</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#title" class="tsd-kind-icon">title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#uniqueitems" class="tsd-kind-icon">unique<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="jsonschema.html#writeonly" class="tsd-kind-icon">write<wbr>Only</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
