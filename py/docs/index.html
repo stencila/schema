@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.4" />
+<title>schema API documentation</title>
+<meta name="description" content="Stencila Schema for Python …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>schema</code></h1>
+</header>
+<section id="section-intro">
+<h1 id="stencila-schema-for-python">Stencila Schema for Python</h1>
+<p><a href="https://dev.azure.com/stencila/stencila/_build/latest?definitionId=9&amp;branchName=master"><img alt="Build Status" src="https://dev.azure.com/stencila/stencila/_apis/build/status/stencila.schema?branchName=master"></a>
+<a href="https://codecov.io/gh/stencila/schema/tree/master/py"><img alt="Code coverage" src="https://badger.nokome.now.sh/codecov-folder/stencila/schema/py"></a>
+<a href="https://github.com/psf/black"><img alt="Code style" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://pypi.org/project/stencila-schema"><img alt="PyPI" src="https://img.shields.io/pypi/v/stencila-schema.svg"></a>
+<a href="https://stencila.github.io/schema/py/docs"><img alt="Docs" src="https://img.shields.io/badge/docs-latest-blue.svg"></a></p>
+<p>This package provides Python bindings for the <a href="https://schema.stenci.la">Stencila Schema</a> for executable documents.
+It is primarily aimed at Python developers wanting to programmatically generate, or modify, executable documents. For example, it is used in <a href="https://github.com/stencila/pyla"><code>pyla</code></a>, a Stencila plugin for Python.</p>
+<h2 id="install">Install</h2>
+<pre><code class="language-python">pip3 install stencila-schema
+</code></pre>
+<h2 id="use">Use</h2>
+<p>This packages exports a Python class for each type of document node in the Stencila Schema e.g. <code>Article</code>, <code>Paragraph</code>, <code>CodeChunk</code>.</p>
+<p>For type safety, type annotations are places on attributes and parameters of the <code>__init__</code> method. e.g.</p>
+<pre><code class="language-python">class CodeExpression(CodeFragment):
+    &quot;&quot;&quot;An expression defined in programming language source code.&quot;&quot;&quot;
+
+    errors: Optional[Array[&quot;CodeError&quot;]] = None
+    &quot;&quot;&quot;Errors when compiling or executing the chunk.&quot;&quot;&quot;
+
+    output: Optional[&quot;Node&quot;] = None
+    &quot;&quot;&quot;The value of the expression when it was last evaluated.&quot;&quot;&quot;
+</code></pre>
+<p>The <code>__init__</code> method of each class has as parameters the attributes of the class (including those that are inherited) with required attributes first (alphabetically where there are more than one), followed by optional attributes (also alphabetically) e.g. for <code>CodeExpression</code>:</p>
+<pre><code class="language-python">    def __init__(
+        self,
+        text: str,
+        errors: Optional[Array[&quot;CodeError&quot;]] = None,
+        format: Optional[str] = None,
+        id: Optional[str] = None,
+        meta: Optional[Dict[str, Any]] = None,
+        output: Optional[&quot;Node&quot;] = None,
+        programmingLanguage: Optional[str] = None
+    )
+</code></pre>
+<p>It is recommended to use keyword arguments when calling constructors as it substantially reduces the likelihood that your code will break if you get the order wrong or if there are changes in the attributes of classes (and thus their order in <code>__init__</code> parameters) in later versions e.g.</p>
+<pre><code class="language-python">from stencila.schema.types import Article, CodeExpression, Paragraph, Person
+
+article = Article(
+    title=&quot;My first executable document&quot;,
+    authors=[Person(givenNames=[&quot;Jane&quot;], familyNames=[&quot;Doe&quot;])],
+    content=[
+        Paragraph(
+            content=[
+                &quot;Two times two: &quot;,
+                CodeExpression(programmingLanguage=&quot;python&quot;, text=&quot;2 * 2&quot;),
+            ]
+        )
+    ],
+)
+
+print(article.authors[0].givenNames)
+# Jane
+</code></pre>
+<p>In contrast, the following code is more concise, but is broken because, although it provides all required arguments, it gets the order wrong:</p>
+<pre><code class="language-python">from stencila.schema.types import Article, CodeExpression, Paragraph, Person
+
+article = Article(
+    &quot;My first executable document&quot;,
+    [Person([&quot;Jane&quot;], [&quot;Doe&quot;])],
+    [Paragraph([&quot;Two times two: &quot;, CodeExpression(&quot;2 * 2&quot;, &quot;python&quot;),])],
+)
+
+print(article.authors[0].address)
+# Jane
+
+print(article.authors[0].givenNames)
+# None
+</code></pre>
+<p>To support conversion of schema nodes to/from JSON, <code>json.py</code> defines <code>encode</code> and <code>decode</code> functions. e.g.</p>
+<pre><code class="language-python">from stencila.schema.types import Heading
+from stencila.schema.json import encode, decode
+
+heading = Heading(content=[&quot;Heading Text&quot;], depth=2)
+#&lt;stencila.schema.types.Heading object at 0x7f2d038a3748&gt;
+
+json = encode(heading)
+print(json)
+#{
+#  &quot;type&quot;: &quot;Heading&quot;,
+#  &quot;content&quot;: [
+#    &quot;Heading Text&quot;
+#  ],
+#  &quot;depth&quot;: 2
+#}
+
+decode(json)
+#&lt;stencila.schema.types.Heading object at 0x7fda7bbdd780&gt;
+</code></pre>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+.. include:: ../../README.md
+&#34;&#34;&#34;</code></pre>
+</details>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="schema.json" href="json.html">schema.json</a></code></dt>
+<dd>
+<section class="desc"><p>Functions for converting nodes to/from JSON …</p></section>
+</dd>
+<dt><code class="name"><a title="schema.types" href="types.html">schema.types</a></code></dt>
+<dd>
+<section class="desc"><p>Python classes for schema types.</p></section>
+</dd>
+<dt><code class="name"><a title="schema.util" href="util.html">schema.util</a></code></dt>
+<dd>
+<section class="desc"><p>Utility functions.</p></section>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul>
+<li><a href="#stencila-schema-for-python">Stencila Schema for Python</a><ul>
+<li><a href="#install">Install</a></li>
+<li><a href="#use">Use</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="schema.json" href="json.html">schema.json</a></code></li>
+<li><code><a title="schema.types" href="types.html">schema.types</a></code></li>
+<li><code><a title="schema.util" href="util.html">schema.util</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.4</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
