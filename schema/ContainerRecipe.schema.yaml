@@ -7,7 +7,7 @@ category: code
 description: The set of build instructions, typically in a text file, to generate a linux container image
 properties:
   containerRuntimePlatform:
-    '@id': stencila:imageRuntimePlatform
+    '@id': stencila:containerRuntimePlatform
     description: The container technology (e.g., Docker or Singularity)
     type: string
   entrypoint:
