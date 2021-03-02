@@ -18,7 +18,7 @@ properties:
         - type: string
         - $ref: PropertyValue
   applicationCategory:
-    '@id': stencila:applicationCategory
+    '@id': schema:applicationCategory
     description: A container image is the binary that empowers Linux containerization
     enum: ['Linux containerization']
   containerRuntimePlatform:
