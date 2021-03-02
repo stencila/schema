@@ -6,7 +6,7 @@ status: experimental
 category: code
 description: The set of build instructions, typically in a text file, to generate a linux container image
 properties:
-  imageRuntimePlatform:
+  containerRuntimePlatform:
     '@id': stencila:imageRuntimePlatform
     description: The container technology (e.g., Docker or Singularity)
     type: string
