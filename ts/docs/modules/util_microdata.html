@@ -1,0 +1,540 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>util/microdata | @stencila/schema</title>
+	<meta name="description" content="Documentation for @stencila/schema">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@stencila/schema</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">@stencila/schema</a>
+				</li>
+				<li>
+					<a href="util_microdata.html">util/microdata</a>
+				</li>
+			</ul>
+			<h1>Module util/microdata</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/util_microdata.microdataitem.html" class="tsd-kind-icon">Microdata<wbr>Item</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/util_microdata.microdataproperty.html" class="tsd-kind-icon">Microdata<wbr>Property</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="util_microdata.html#microdata" class="tsd-kind-icon">Microdata</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdata-1" class="tsd-kind-icon">microdata</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataitem-1" class="tsd-kind-icon">microdata<wbr>Item</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataitemprop" class="tsd-kind-icon">microdata<wbr>Itemprop</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataitemtype" class="tsd-kind-icon">microdata<wbr>Itemtype</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataproperty-1" class="tsd-kind-icon">microdata<wbr>Property</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataroot" class="tsd-kind-icon">microdata<wbr>Root</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdatatype" class="tsd-kind-icon">microdata<wbr>Type</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="util_microdata.html#microdataurl" class="tsd-kind-icon">microdata<wbr>Url</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="microdata" class="tsd-anchor"></a>
+					<h3>Microdata</h3>
+					<div class="tsd-signature tsd-kind-icon">Microdata<span class="tsd-signature-symbol">:</span> <a href="../interfaces/util_microdata.microdataitem.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataItem</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/util_microdata.microdataproperty.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataProperty</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L156">ts/util/microdata.ts:156</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdata-1" class="tsd-anchor"></a>
+					<h3>microdata</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="types.html#node" class="tsd-signature-type" data-tsd-kind="Type alias">Node</a>, property<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Role</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="util_microdata.html#microdata" class="tsd-signature-type" data-tsd-kind="Type alias">Microdata</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L166">ts/util/microdata.ts:166</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create all Microdata attributes for a Stencila <code>Node</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="types.html#node" class="tsd-signature-type" data-tsd-kind="Type alias">Node</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The node e.g. a <code>Person</code> node</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> property: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the property that this node is part of e.g <code>authors</code></p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> role: <span class="tsd-signature-type">Role</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Is this an item within an array property e.g a <code>Person</code> within <code>authors</code></p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The id used to link to / from this Microdata item</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="util_microdata.html#microdata" class="tsd-signature-type" data-tsd-kind="Type alias">Microdata</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataitem-1" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Item<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="types.html#node" class="tsd-signature-type" data-tsd-kind="Type alias">Node</a>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/util_microdata.microdataitem.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataItem</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L45">ts/util/microdata.ts:45</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create <code>MicrodataItem</code> attributes for a node.</p>
+								</div>
+								<p>Does not create the <code>itemscope</code> and <code>itemtype</code> attributes for nodes that
+									are primitive (and therefore which do not represent a &quot;scope&quot; having
+									<code>itemprop</code>s nested within it). Instead, for primitive nodes, other than <code>Text</code>
+								add the <code>data-itemtype</code> attribute, do they can be styled if so desired.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="types.html#node" class="tsd-signature-type" data-tsd-kind="Type alias">Node</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The node to create Microdata attributes for</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Id of the Microdata item. Used to link to this node using the <code>itemref</code> property.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/util_microdata.microdataitem.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataItem</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataitemprop" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Itemprop</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Itemprop<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Role</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L131">ts/util/microdata.ts:131</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the HTML Microdata <code>itemprop</code> for a Stencila Schema property.</p>
+								</div>
+								<p>The <code>itemprop</code> attribute is normally just the name of the property
+									i.e. it is not prefixed by a base URL. This function returns the
+									<code>[prefix, name]</code> pair e.g. <code>[&quot;schema&quot;, &quot;author&quot;]</code>,
+									<code>[&quot;codemeta&quot;, &quot;maintainer&quot;]</code> because you may only want to encode
+								<code>itemprop</code>s for well known schemas e.g. schema.org</p>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://www.w3.org/TR/microdata/#dfn-attr-itemprop" class="external">https://www.w3.org/TR/microdata/#dfn-attr-itemprop</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the property</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> role: <span class="tsd-signature-type">Role</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Is the node for which attributes are being generated
+										an item within an array property? e.g. a <code>Person</code> in <code>authors</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataitemtype" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Itemtype</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Itemtype<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/types.types-1.html" class="tsd-signature-type" data-tsd-kind="Interface">Types</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L67">ts/util/microdata.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the HTML Microdata <code>itemtype</code> for a Stencila Schema type</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://www.w3.org/TR/microdata/#dfn-itemtype" class="external">https://www.w3.org/TR/microdata/#dfn-itemtype</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-symbol">keyof </span><a href="../interfaces/types.types-1.html" class="tsd-signature-type" data-tsd-kind="Interface">Types</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataproperty-1" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Property<span class="tsd-signature-symbol">(</span>property<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Role</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/util_microdata.microdataproperty.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataProperty</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L105">ts/util/microdata.ts:105</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create <code>MicrodataProperty</code> attributes for a node property.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>property: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the property</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> role: <span class="tsd-signature-type">Role</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Id of another Microdata item to link to using the <code>itemref</code> property.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/util_microdata.microdataproperty.html" class="tsd-signature-type" data-tsd-kind="Interface">MicrodataProperty</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataroot" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Root</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Root<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>data-itemscope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;root&quot;</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L191">ts/util/microdata.ts:191</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the &#39;pseudo&#39; HTML Microdata attribute for the root element.</p>
+								</div>
+								<p>This attribute name / value pair is used to scope CSS variables to
+									the root Stencila node in an HML document. It is used by Encoda when
+									encoding to HTML, it is in Thema to scope CSS variable thereby
+								avoiding variable name clashes from using the CSS <code>:root</code> pseudo-class.</p>
+								<p>Although not directly related to Microdata, given it is used in both
+								of those projects, this appears to be the best place for it.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>data-itemscope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;root&quot;</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>data-<wbr>itemscope<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;root&quot;</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdatatype" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Type<span class="tsd-signature-symbol">(</span>itemtype<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/types.types-1.html" class="tsd-signature-type" data-tsd-kind="Interface">Types</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L76">ts/util/microdata.ts:76</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the Stencila Schema type from a HTML Microdata <code>itemtype</code>.</p>
+								</div>
+								<p>This is the inverse of <code>microdataItemtype</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>itemtype: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><a href="../interfaces/types.types-1.html" class="tsd-signature-type" data-tsd-kind="Interface">Types</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="microdataurl" class="tsd-anchor"></a>
+					<h3>microdata<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">microdata<wbr>Url<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stencila/schema/blob/379dffc/ts/util/microdata.ts#L17">ts/util/microdata.ts:17</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the URL used in Microdata attributes.</p>
+								</div>
+								<p>This is used to normalize the versioned URL from the
+								JSON-LD context.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;&#x27;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="jsonschema.html">Json<wbr>Schema</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="docs.html">docs</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="index_browser.html">index.browser</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="log.html">log</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="schema.html">schema</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types.html">types</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util.html">util</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_guards.html">util/guards</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_helpers.html">util/helpers</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_index_browser.html">util/index.browser</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_jsonschemas.html">util/json<wbr>Schemas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_jsonld.html">util/jsonld</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="util_microdata.html">util/microdata</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_nodetype.html">util/node<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="util_version.html">util/version</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/util_microdata.microdataitem.html" class="tsd-kind-icon">Microdata<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/util_microdata.microdataproperty.html" class="tsd-kind-icon">Microdata<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="util_microdata.html#microdata" class="tsd-kind-icon">Microdata</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdata-1" class="tsd-kind-icon">microdata</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataitem-1" class="tsd-kind-icon">microdata<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataitemprop" class="tsd-kind-icon">microdata<wbr>Itemprop</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataitemtype" class="tsd-kind-icon">microdata<wbr>Itemtype</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataproperty-1" class="tsd-kind-icon">microdata<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataroot" class="tsd-kind-icon">microdata<wbr>Root</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdatatype" class="tsd-kind-icon">microdata<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="util_microdata.html#microdataurl" class="tsd-kind-icon">microdata<wbr>Url</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
