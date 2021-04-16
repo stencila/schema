@@ -36,6 +36,8 @@ properties:
   label:
     '@id': stencila:label
     description: A short label for the claim.
-    type: string
+    type: array
+    items:
+      $ref: InlineContent
 required:
   - content

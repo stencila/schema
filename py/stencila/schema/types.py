@@ -971,7 +971,7 @@ class Claim(CreativeWork):
     claimType: Optional["EClaimType"] = None
     """Kind of the claim."""
 
-    label: Optional[str] = None
+    label: Optional[Array["InlineContent"]] = None
     """A short label for the claim."""
 
 
@@ -998,7 +998,7 @@ class Claim(CreativeWork):
         images: Optional[Array[Union["ImageObject", str]]] = None,
         isPartOf: Optional["CreativeWorkTypes"] = None,
         keywords: Optional[Array[str]] = None,
-        label: Optional[str] = None,
+        label: Optional[Array["InlineContent"]] = None,
         licenses: Optional[Array[Union["CreativeWorkTypes", str]]] = None,
         maintainers: Optional[Array[Union["Person", "Organization"]]] = None,
         meta: Optional[Dict[str, Any]] = None,

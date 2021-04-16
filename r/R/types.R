@@ -1013,7 +1013,7 @@ Claim <- function(
   self$type <- as_scalar("Claim")
   self[["content"]] <- check_property("Claim", "content", TRUE, missing(content), Array(BlockContent), content)
   self[["claimType"]] <- check_property("Claim", "claimType", FALSE, missing(claimType), Enum("Statement", "Theorem", "Lemma", "Proof", "Postulate", "Hypothesis", "Proposition", "Corollary"), claimType)
-  self[["label"]] <- check_property("Claim", "label", FALSE, missing(label), "character", label)
+  self[["label"]] <- check_property("Claim", "label", FALSE, missing(label), Array(InlineContent), label)
   class(self) <- c(class(self), "Claim")
   self
 }
