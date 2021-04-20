@@ -1,0 +1,27 @@
+# Cite
+
+A reference to a CreativeWork that is cited in another CreativeWork. 
+
+## Properties
+
+| Name                    | @id                                                                       | Type                                                                                                     | Description                                                                                            | Inherited from        |
+| ----------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------- |
+| **target _(required)_** | [stencila:target](https://schema.stenci.la/target.jsonld)                 | `string`                                                                                                 | The target of the citation (URL or reference ID).                                                      | [Cite](./Cite.md)     |
+| **type _(required)_**   | [schema:type](https://schema.org/type)                                    | `enum{`​`Cite`​`}`                                                                                       | The name of the type.                                                                                  | [Entity](./Entity.md) |
+| citationIntent          | [stencila:citationIntent](https://schema.stenci.la/citationIntent.jsonld) | `array[`​[`CitationIntentEnumeration`](./CitationIntentEnumeration.md)​`]`                               | The type/s of the citation, both factually and rhetorically.                                           | [Cite](./Cite.md)     |
+| citationMode            | [stencila:citationMode](https://schema.stenci.la/citationMode.jsonld)     | `enum{`​`Parenthetical`, `Narrative`, `NarrativeAuthor`, `NarrativeYear`, `normal`, `suppressAuthor`​`}` | Determines how the citation is shown within the surrounding text.                                      | [Cite](./Cite.md)     |
+| citationPrefix          | [stencila:citationPrefix](https://schema.stenci.la/citationPrefix.jsonld) | `string`                                                                                                 | Text to show before the citation.                                                                      | [Cite](./Cite.md)     |
+| citationSuffix          | [stencila:citationSuffix](https://schema.stenci.la/citationSuffix.jsonld) | `string`                                                                                                 | Text to show after the citation.                                                                       | [Cite](./Cite.md)     |
+| content                 | [stencila:content](https://schema.stenci.la/content.jsonld)               | `array[`​[`InlineContent`](./InlineContent.md)​`]`                                                       | Optional structured content/text of this citation.                                                     | [Cite](./Cite.md)     |
+| id                      | [schema:id](https://schema.org/id)                                        | `string`                                                                                                 | The identifier for this item.                                                                          | [Entity](./Entity.md) |
+| meta                    | [stencila:meta](https://schema.stenci.la/meta.jsonld)                     | `object`                                                                                                 | Metadata associated with this item.                                                                    | [Entity](./Entity.md) |
+| pageEnd                 | [schema:pageEnd](https://schema.org/pageEnd)                              | `integer` \| `string`                                                                                    | The page on which the work ends; for example "138" or "xvi".                                           | [Cite](./Cite.md)     |
+| pageStart               | [schema:pageStart](https://schema.org/pageStart)                          | `integer` \| `string`                                                                                    | The page on which the work starts; for example "135" or "xiii".                                        | [Cite](./Cite.md)     |
+| pagination              | [schema:pagination](https://schema.org/pagination)                        | `string`                                                                                                 | Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55".  | [Cite](./Cite.md)     |
+
+## Related
+
+-   Parent: [Entity](./Entity.md)
+-   Descendants: None
+
+**Note:** This documentation was autogenerated from [`Cite.schema.yaml`](https://github.com/stencila/schema/blob/master/schema/Cite.schema.yaml). This type is also available in [JSON-LD](https://schema.stenci.la/Cite.jsonld) and [JSON Schema](https://schema.stenci.la/Cite.schema.json).
