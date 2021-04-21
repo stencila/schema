@@ -1,0 +1,28 @@
+# MonetaryGrant
+
+A monetary grant.
+
+## Properties
+
+| Name                  | @id                                                      | Type                                                                                                         | Description                                                                                               | Inherited from                   |
+| --------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| **type _(required)_** | [schema:type](https://schema.org/type)                   | `enum{`​`MonetaryGrant`​`}`                                                                                  | The name of the type.                                                                                     | [Entity](./Entity)               |
+| alternateNames        | [schema:alternateName](https://schema.org/alternateName) | `array[`​`string`​`]`                                                                                        | Alternate names (aliases) for the item.                                                                   | [Thing](./Thing)                 |
+| amounts               | [schema:amount](https://schema.org/amount)               | `number`                                                                                                     | The amount of money.                                                                                      | [MonetaryGrant](./MonetaryGrant) |
+| description           | [schema:description](https://schema.org/description)     | `array[`​[`BlockContent`](./BlockContent)​`]` \| `array[`​[`InlineContent`](./InlineContent)​`]` \| `string` | A description of the item.                                                                                | [Thing](./Thing)                 |
+| fundedItems           | [schema:fundedItem](https://schema.org/fundedItem)       | `array[`​[`Thing`](./Thing)​`]`                                                                              | Indicates an item funded or sponsored through a Grant.                                                    | [Grant](./Grant)                 |
+| funders               | [schema:funder](https://schema.org/funder)               | `array[`​[`Person`](./Person) \| [`Organization`](./Organization)​`]`                                        | A person or organization that supports (sponsors) something through some kind of financial contribution.  | [MonetaryGrant](./MonetaryGrant) |
+| id                    | [schema:id](https://schema.org/id)                       | `string`                                                                                                     | The identifier for this item.                                                                             | [Entity](./Entity)               |
+| identifiers           | [schema:identifier](https://schema.org/identifier)       | `array[`​[`PropertyValue`](./PropertyValue) \| `string`​`]`                                                  | Any kind of identifier for any kind of Thing.                                                             | [Thing](./Thing)                 |
+| images                | [schema:image](https://schema.org/image)                 | `array[`​[`ImageObject`](./ImageObject) \| `string:uri`​`]`                                                  | Images of the item.                                                                                       | [Thing](./Thing)                 |
+| meta                  | [stencila:meta](https://schema.stenci.la/meta.jsonld)    | `object`                                                                                                     | Metadata associated with this item.                                                                       | [Entity](./Entity)               |
+| name                  | [schema:name](https://schema.org/name)                   | `string`                                                                                                     | The name of the item.                                                                                     | [Thing](./Thing)                 |
+| sponsors              | [schema:sponsor](https://schema.org/sponsor)             | `array[`​[`Person`](./Person) \| [`Organization`](./Organization)​`]`                                        | A person or organization that supports a thing through a pledge, promise, or financial contribution.      | [Grant](./Grant)                 |
+| url                   | [schema:url](https://schema.org/url)                     | `string:uri`                                                                                                 | The URL of the item.                                                                                      | [Thing](./Thing)                 |
+
+## Related
+
+-   Parent: [Grant](./Grant)
+-   Descendants: None
+
+ This documentation was autogenerated from [`MonetaryGrant.schema.yaml`](https://github.com/stencila/schema/blob/master/schema/MonetaryGrant.schema.yaml). This type is also available in [JSON-LD](https://schema.org/MonetaryGrant) and [JSON Schema](https://schema.stenci.la/MonetaryGrant.schema.json).

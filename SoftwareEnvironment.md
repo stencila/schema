@@ -1,0 +1,27 @@
+# SoftwareEnvironment
+
+A computational environment.
+
+## Properties
+
+| Name                  | @id                                                         | Type                                                                                                         | Description                                                                                               | Inherited from                               |
+| --------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **name _(required)_** | [schema:name](https://schema.org/name)                      | `string`                                                                                                     | The name of the item.                                                                                     | [Thing](./Thing)                             |
+| **type _(required)_** | [schema:type](https://schema.org/type)                      | `enum{`​`SoftwareEnvironment`​`}`                                                                            | The name of the type.                                                                                     | [Entity](./Entity)                           |
+| adds                  | [stencila:adds](https://schema.stenci.la/adds.jsonld)       | `array[`​[`SoftwareSourceCode`](./SoftwareSourceCode)​`]`                                                    | The packages that this environment adds to the base environments listed under \`extends\` (if any).,      | [SoftwareEnvironment](./SoftwareEnvironment) |
+| alternateNames        | [schema:alternateName](https://schema.org/alternateName)    | `array[`​`string`​`]`                                                                                        | Alternate names (aliases) for the item.                                                                   | [Thing](./Thing)                             |
+| description           | [schema:description](https://schema.org/description)        | `array[`​[`BlockContent`](./BlockContent)​`]` \| `array[`​[`InlineContent`](./InlineContent)​`]` \| `string` | A description of the item.                                                                                | [Thing](./Thing)                             |
+| extends               | [stencila:extends](https://schema.stenci.la/extends.jsonld) | `array[`​[`SoftwareEnvironment`](./SoftwareEnvironment)​`]`                                                  | Other environments that this environment extends by adding or removing packages.,                         | [SoftwareEnvironment](./SoftwareEnvironment) |
+| id                    | [schema:id](https://schema.org/id)                          | `string`                                                                                                     | The identifier for this item.                                                                             | [Entity](./Entity)                           |
+| identifiers           | [schema:identifier](https://schema.org/identifier)          | `array[`​[`PropertyValue`](./PropertyValue) \| `string`​`]`                                                  | Any kind of identifier for any kind of Thing.                                                             | [Thing](./Thing)                             |
+| images                | [schema:image](https://schema.org/image)                    | `array[`​[`ImageObject`](./ImageObject) \| `string:uri`​`]`                                                  | Images of the item.                                                                                       | [Thing](./Thing)                             |
+| meta                  | [stencila:meta](https://schema.stenci.la/meta.jsonld)       | `object`                                                                                                     | Metadata associated with this item.                                                                       | [Entity](./Entity)                           |
+| removes               | [stencila:removes](https://schema.stenci.la/removes.jsonld) | `array[`​[`SoftwareSourceCode`](./SoftwareSourceCode)​`]`                                                    | The packages that this environment removes from the base environments listed under \`extends\` (if any)., | [SoftwareEnvironment](./SoftwareEnvironment) |
+| url                   | [schema:url](https://schema.org/url)                        | `string:uri`                                                                                                 | The URL of the item.                                                                                      | [Thing](./Thing)                             |
+
+## Related
+
+-   Parent: [Thing](./Thing)
+-   Descendants: None
+
+ This documentation was autogenerated from [`SoftwareEnvironment.schema.yaml`](https://github.com/stencila/schema/blob/master/schema/SoftwareEnvironment.schema.yaml). This type is also available in [JSON-LD](https://schema.stenci.la/SoftwareEnvironment.jsonld) and [JSON Schema](https://schema.stenci.la/SoftwareEnvironment.schema.json).
