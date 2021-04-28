@@ -1,0 +1,46 @@
+---
+custom_edit_url: https://github.com/stencila/schema/edit/master/schema/CodeChunk.schema.yaml
+---
+
+# CodeChunk
+
+A executable chunk of code.
+
+## Properties
+
+| Name                | @id                                                                  | Type                                                                                                                                  | Description                                                                                            | Inherited from                    |
+| ------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| **text**            | [schema:text](https://schema.org/text)                               | string                                                                                                                                | The text of the code.                                                                                  | [Code](../code/Code.md)           |
+| **type**            | [schema:type](https://schema.org/type)                               | 'CodeChunk'                                                                                                                           | The name of the type.                                                                                  | [Entity](../other/Entity.md)      |
+| alters              | [stencila:alters](https://schema.stenci.la/alters.jsonld)            | Array of string                                                                                                                       | Names of variables that the code chunk alters. See note [2](#notes).                                   | [CodeChunk](../code/CodeChunk.md) |
+| assigns             | [stencila:assigns](https://schema.stenci.la/assigns.jsonld)          | Array of ([Variable](../code/Variable.md) _or_ string)                                                                                | Variables that the code chunk assigns to. See note [1](#notes).                                        | [CodeChunk](../code/CodeChunk.md) |
+| caption             | [schema:caption](https://schema.org/caption)                         | Array of [BlockContent](../prose/BlockContent.md) _or_ string                                                                         | A caption for the CodeChunk. See note [3](#notes).                                                     | [CodeChunk](../code/CodeChunk.md) |
+| declares            | [stencila:declares](https://schema.stenci.la/declares.jsonld)        | Array of ([Variable](../code/Variable.md) _or_ [Function](../code/Function.md) _or_ string)                                           | Variables that the code chunk declares.                                                                | [CodeChunk](../code/CodeChunk.md) |
+| duration            | [stencila:duration](https://schema.stenci.la/duration.jsonld)        | number                                                                                                                                | Duration in seconds of the last execution of the chunk.                                                | [CodeChunk](../code/CodeChunk.md) |
+| errors              | [stencila:errors](https://schema.stenci.la/errors.jsonld)            | Array of [CodeError](../code/CodeError.md)                                                                                            | Errors when compiling or executing the chunk.                                                          | [CodeChunk](../code/CodeChunk.md) |
+| exportFrom          | [stencila:exportFrom](https://schema.stenci.la/exportFrom.jsonld)    | string                                                                                                                                | A compilation directive giving the name of the variable to export into the content of the code block.  | [CodeBlock](../code/CodeBlock.md) |
+| format              | [schema:encodingFormat](https://schema.org/encodingFormat)           | string                                                                                                                                | Media type, typically expressed using a MIME format, of the code. See note [4](#notes).                | [Code](../code/Code.md)           |
+| id                  | [schema:id](https://schema.org/id)                                   | string                                                                                                                                | The identifier for this item.                                                                          | [Entity](../other/Entity.md)      |
+| importTo            | [stencila:importTo](https://schema.stenci.la/importTo.jsonld)        | string                                                                                                                                | A compilation directive giving the name of the variable to import the content of the code block as.    | [CodeBlock](../code/CodeBlock.md) |
+| imports             | [stencila:imports](https://schema.stenci.la/imports.jsonld)          | Array of ([SoftwareSourceCode](../code/SoftwareSourceCode.md) _or_ [SoftwareApplication](../code/SoftwareApplication.md) _or_ string) | Software packages that the code chunk imports                                                          | [CodeChunk](../code/CodeChunk.md) |
+| label               | [stencila:label](https://schema.stenci.la/label.jsonld)              | string                                                                                                                                | A short label for the CodeChunk.                                                                       | [CodeChunk](../code/CodeChunk.md) |
+| meta                | [stencila:meta](https://schema.stenci.la/meta.jsonld)                | object                                                                                                                                | Metadata associated with this item.                                                                    | [Entity](../other/Entity.md)      |
+| outputs             | [stencila:outputs](https://schema.stenci.la/outputs.jsonld)          | Array of [Node](../other/Node.md)                                                                                                     | Outputs from executing the chunk.                                                                      | [CodeChunk](../code/CodeChunk.md) |
+| programmingLanguage | [schema:programmingLanguage](https://schema.org/programmingLanguage) | string                                                                                                                                | The programming language of the code.                                                                  | [Code](../code/Code.md)           |
+| reads               | [stencila:reads](https://schema.stenci.la/reads.jsonld)              | Array of string                                                                                                                       | Filesystem paths that this code chunk reads from.                                                      | [CodeChunk](../code/CodeChunk.md) |
+| uses                | [stencila:uses](https://schema.stenci.la/uses.jsonld)                | Array of ([Variable](../code/Variable.md) _or_ string)                                                                                | Names of variables that the code chunk uses (but does not alter).                                      | [CodeChunk](../code/CodeChunk.md) |
+
+## Related
+
+-   Parent: [CodeBlock](../code/CodeBlock.md)
+-   Descendants: None
+
+## Notes
+
+1.  **assigns** : In languages such as Python and R we are unable to differentiate between an assignment that is a declaration and an assignment that is an alteration (a re-assignment). The "primary" compiler keeps a track of the variables declared in code chunks prior to the current chunk in the document and may treat an assignment as a declaration.
+2.  **alters** : This property allows users to add undetected alterations (i.e. not assignments) to this list. Chunks that alter a variable need to be inserted into the dependency graph between `declares` and `uses`
+3.  **caption** : An array of nodes or, to be compatible with <https://schema.org/caption>, a string.
+4.  **format** : This property allows the differentiation of formats using the same programming language or variants of a programming language. An example is using `programmingLanguage` "json" and `encodingFormat` "application/ld+json" for JSON-LD code examples.
+5.  Available as [JSON-LD](https://schema.stenci.la/CodeChunk.jsonld).
+6.  Available as [JSON Schema](https://schema.stenci.la/v1/CodeChunk.schema.json).
+7.  This documentation was generated from [CodeChunk.schema.yaml](https://github.com/stencila/schema/blob/master/schema/CodeChunk.schema.yaml).
