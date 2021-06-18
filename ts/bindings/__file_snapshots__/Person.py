@@ -42,7 +42,7 @@ some kind of financial contribution.
         address: Optional[Union["PostalAddress", str]] = None,
         affiliations: Optional[Array["Organization"]] = None,
         alternateNames: Optional[Array[str]] = None,
-        description: Optional[Union[Array["BlockContent"], Array["InlineContent"], str]] = None,
+        description: Optional[Union[Array[Union["BlockContent", "InlineContent"]], str]] = None,
         emails: Optional[Array[str]] = None,
         familyNames: Optional[Array[str]] = None,
         funders: Optional[Array[Union["Organization", "Person"]]] = None,

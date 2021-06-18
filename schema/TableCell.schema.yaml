@@ -49,7 +49,6 @@ properties:
     anyOf:
       - type: array
         items:
-          $ref: BlockContent
-      - type: array
-        items:
-          $ref: InlineContent
+          anyOf:
+            - $ref: BlockContent
+            - $ref: InlineContent

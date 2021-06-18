@@ -4593,8 +4593,7 @@ pub enum CodeChunkUses {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ThingDescription {
-    VecBlockContent(Vec<BlockContent>),
-    VecInlineContent(Vec<InlineContent>),
+    VecThingDescription(Vec<ThingDescription>),
     String(String),
 }
 
@@ -4634,8 +4633,7 @@ pub enum CreativeWorkAuthors {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum CreativeWorkContent {
-    VecBlockContent(Vec<BlockContent>),
-    VecInlineContent(Vec<InlineContent>),
+    VecCreativeWorkContent(Vec<CreativeWorkContent>),
     String(String),
 }
 
@@ -4758,8 +4756,7 @@ pub enum ListOrder {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ListItemContent {
-    VecBlockContent(Vec<BlockContent>),
-    VecInlineContent(Vec<InlineContent>),
+    VecListItemContent(Vec<ListItemContent>),
 }
 
 /// Types permitted for the `funders` property of a `MonetaryGrant` node.
@@ -4944,8 +4941,7 @@ pub enum TableCellCellType {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum TableCellContent {
-    VecBlockContent(Vec<BlockContent>),
-    VecInlineContent(Vec<InlineContent>),
+    VecTableCellContent(Vec<TableCellContent>),
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
